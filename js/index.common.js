@@ -6,7 +6,7 @@ var channelLoadLink = {
     "Windows Phone": "https://www.qq.com"
 };
 
-var testUrl = "static/";
+var testUrl = "";
 
 var sessionStorageJsonKey = [
     "haderInfo",

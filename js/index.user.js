@@ -138,7 +138,7 @@ function signOut() {
     removeSession(sessionStorageJsonKey[0]);
     removeSession(sessionStorageJsonKey[1]);
     setTimeout(function(){
-        window.location.href = $("base").attr("href") + testUrl + "/index.html";
+        window.location.href = $("base").attr("href") + testUrl + "index.html";
     }, 200);
 }
 
