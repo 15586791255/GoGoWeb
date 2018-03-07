@@ -14,7 +14,7 @@ $(function() {
     initHomeNav();
     //initHotRaces();
     initHomeList();
-    initBottom();
+    /*initBottom();*/
     initFoot();
     showDetailList();
 });
