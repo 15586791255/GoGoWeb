@@ -1,0 +1,768 @@
+a
+{
+    color: #000;
+}input
+{
+    border: none;
+    outline: none;
+}.user-info
+{
+    position: relative;
+
+    height: 1.33333rem;
+
+    background: #2f0233;
+}.user-info .user-img
+{
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+
+    width: .93333rem;
+    height: .93333rem;
+
+    border-radius: .93333rem;
+    background: #fff;
+}.user-info .user-img img
+{
+    display: block;
+
+    width: 100%;
+
+    border-radius: .93333rem;
+}.user-info .user-img span
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: .21333rem;
+    height: .21333rem;
+
+    border-radius: .93333rem;
+    background: red;
+}.user-info .user-name
+{
+    position: absolute;
+    top: 0;
+    left: 1.33333rem;
+
+    overflow: hidden;
+
+    width: 2.93333rem;
+    height: 1.33333rem;
+
+    color: #fff;
+}.user-info .user-name div
+{
+    font-size: .45333rem;
+
+    height: .66667rem;
+}.user-info .user-name .name
+{
+    line-height: .8rem;
+
+    overflow: hidden;
+}.user-info .user-name .gold
+{
+    line-height: .53333rem;
+
+    height: .53333rem;
+}.user-info .user-name .gold div
+{
+    font-size: .37333rem;
+
+    float: left;
+}.user-info .user-name .gold .icon
+{
+    position: relative;
+    top: .06667rem;
+
+    width: .4rem;
+    height: .4rem;
+
+    background: url('/images/gold.png') no-repeat;
+    background-position: 0;
+    background-size: cover;
+}.user-info .goHome
+{
+    width: 2.66667rem;
+    background: url('/images/ic_home_0_24.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+}.user-info .goHome-link{
+    width: 2.66667rem;
+    display: block;
+    height: 1.33333rem;
+    margin: 0 auto;
+}.user-info .goHome,
+.user-info .logo
+{
+    display: block;
+
+    height: 1.33333rem;
+    margin: 0 auto;
+}.user-info .detail-link
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 2.66667rem;
+    height: 1.33333rem;
+}.user-info .detail-link a
+{
+    display: block;
+    float: left;
+}.user-info .detail-link .shop
+{
+    position: relative;
+
+    width: .86667rem;
+    height: .86667rem;
+    margin-top: .33333rem;
+
+    background: url('http://m.wxqing.cn/static/image/shop.png') no-repeat;
+    background-size: contain;
+}.user-info .detail-link .shop span
+{
+    position: absolute;
+    top: -.13333rem;
+    right: -.13333rem;
+
+    display: block;
+
+    width: .21333rem;
+    height: .21333rem;
+
+    border-radius: .93333rem;
+    background: red;
+}.user-info .detail-link .myCar
+{
+    position: relative;
+
+    width: .86667rem;
+    height: .86667rem;
+    margin-top: .24rem;
+    margin-left: .46667rem;
+
+    background: url('http://m.wxqing.cn/static/image/mycar.png') no-repeat;
+    background-size: contain;
+}.user-info .detail-link .myCar .car-count
+{
+    font-size: .26667rem;
+    line-height: .50667rem;
+
+    position: absolute;
+    top: -.13333rem;
+    right: -.13333rem;
+
+    width: .46667rem;
+    height: .46667rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .4rem;
+    background: red;
+}@-webkit-keyframes rubberBand
+{
+    0%
+    {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }30%
+    {
+        -webkit-transform: scale3d(1.25,.75,1);
+                transform: scale3d(1.25,.75,1);
+    }40%
+    {
+        -webkit-transform: scale3d(.75,1.25,1);
+                transform: scale3d(.75,1.25,1);
+    }50%
+    {
+        -webkit-transform: scale3d(1.15,.85,1);
+                transform: scale3d(1.15,.85,1);
+    }65%
+    {
+        -webkit-transform: scale3d(.95,1.05,1);
+                transform: scale3d(.95,1.05,1);
+    }75%
+    {
+        -webkit-transform: scale3d(1.05,.95,1);
+                transform: scale3d(1.05,.95,1);
+    }to
+    {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+}@keyframes rubberBand
+{
+    0%
+    {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }30%
+    {
+        -webkit-transform: scale3d(1.25,.75,1);
+                transform: scale3d(1.25,.75,1);
+    }40%
+    {
+        -webkit-transform: scale3d(.75,1.25,1);
+                transform: scale3d(.75,1.25,1);
+    }50%
+    {
+        -webkit-transform: scale3d(1.15,.85,1);
+                transform: scale3d(1.15,.85,1);
+    }65%
+    {
+        -webkit-transform: scale3d(.95,1.05,1);
+                transform: scale3d(.95,1.05,1);
+    }75%
+    {
+        -webkit-transform: scale3d(1.05,.95,1);
+                transform: scale3d(1.05,.95,1);
+    }to
+    {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+}.user-info .detail-link .myCar .rubberBand
+{
+    -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+}.user-info .detail-link .myCar .animated
+{
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}.user-info .detail-link .myCar .shake
+{
+    -webkit-animation-name: shake;
+            animation-name: shake;
+}.user-info .detail-link .animatePhone
+{
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    left: -.33333rem;
+
+    width: 1.6rem;
+    height: 1.73333rem;
+
+    -webkit-animation: animatePhone 1s infinite alternate;
+            animation: animatePhone 1s infinite alternate;
+
+    background: url('http://m.wxqing.cn/static/image/animephone.png') no-repeat;
+    background-size: contain;
+}@-webkit-keyframes animatePhone
+{
+    0%
+    {
+        top: 40px;
+    }to
+    {
+        top: 50px;
+    }
+}@keyframes animatePhone
+{
+    0%
+    {
+        top: 40px;
+    }to
+    {
+        top: 50px;
+    }
+}.user-info .huiIN
+{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+
+    visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    background: rgba(0,0,0,.5);
+}.user-info .huiIN-show
+{
+    visibility: visible;
+
+    opacity: 1;
+
+    ransition: .3s ease;
+}.user-info .login-page
+{
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: -webkit-transform .3s ease;
+            transition: -webkit-transform .3s ease;
+            transition:         transform .3s ease;
+            transition:         transform .3s ease,-webkit-transform .3s ease;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}.user-info .login-page .translate
+{
+    position: relative;
+    z-index: 1;
+
+    overflow: scroll;
+
+    width: 8rem;
+    height: 100%;
+
+    background: #fff;
+}.user-info .login-page .back
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+}.user-info .login-page .no-login
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    position: relative;
+    z-index: 10;
+
+    overflow: hidden;
+
+    width: 8rem;
+    height: 100%;
+    padding-top: .4rem;
+
+    text-align: center;
+
+    opacity: 1;
+    background: #fff;
+}.user-info .login-page .no-login .phone-input input
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    display: block;
+
+    width: 5.6rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    margin-top: .26667rem;
+    padding: 0 .26667rem;
+
+    border: 1px solid #e2e2e2;
+    border-radius: .13333rem;
+}.user-info .login-page .no-login .code
+{
+    width: 6.13333rem;
+    height: 1.33333rem;
+    margin: .26667rem auto;
+}.user-info .login-page .no-login .code input
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    display: block;
+    float: left;
+
+    width: 2.66667rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    padding: 0 .26667rem;
+
+    border: 1px solid #e2e2e2;
+    border-radius: .13333rem;
+}.user-info .login-page .no-login .code .code-btn
+{
+    font-size: .26667rem;
+    line-height: 1.33333rem;
+
+    float: right;
+
+    width: 2.26667rem;
+    height: 1.33333rem;
+
+    text-align: center;
+
+    border-radius: .13333rem;
+    background: #79f1a4;
+}.user-info .login-page .no-login .code .code-btn-ing
+{
+    color: #fff;
+    background: #acafad;
+}.user-info .login-page .no-login .error-msg
+{
+    font-size: 12px;
+
+    text-align: center;
+
+    color: red;
+}.user-info .login-page .no-login .login-btn
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    width: 6rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .13333rem;
+    background: #2f0233;
+}.user-info .login-page .no-login .login-other
+{
+    margin-top: .4rem;
+}.user-info .login-page .no-login .login-other .division
+{
+    width: 5.66667rem;
+    height: .29333rem;
+    margin: 0 auto;
+
+    background: url('http://m.wxqing.cn/static/image/fenge.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .no-login .login-other .btn
+{
+    width: 5.66667rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    padding: .4rem 0;
+
+    border-bottom: 1px solid #eee;
+}.user-info .login-page .no-login .login-other .btn .btn-qq
+{
+    float: left;
+
+    width: 1.33333rem;
+    height: 1.33333rem;
+    margin-left: 1.06667rem;
+
+    background: url('http://m.wxqing.cn/static/image/qq.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .no-login .login-other .btn .btn-wx
+{
+    width: 1.33333rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+
+    background: url('http://m.wxqing.cn/static/image/wxx.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .no-login .login-other .isNotWx .btn-wx
+{
+    display: none;
+}.user-info .login-page .no-login .login-other .isNotWx .btn-qq
+{
+    float: none;
+
+    margin: 0 auto;
+}.user-info .login-page .login-ed
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    position: relative;
+    z-index: 10;
+
+    overflow: hidden;
+
+    width: 8rem;
+    height: 100%;
+    padding-top: .4rem;
+
+    text-align: center;
+
+    background: #fff;
+}.user-info .login-page .login-ed .quitBtn
+{
+    position: absolute;
+    top: .26667rem;
+    right: .26667rem;
+
+    width: 1.6rem;
+    height: .8rem;
+
+    background: red;
+    background: url('http://m.wxqing.cn/static/image/exit.png') no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}.user-info .login-page .login-ed .setBtn
+{
+    position: absolute;
+    top: .26667rem;
+    left: .26667rem;
+
+    width: .8rem;
+    height: .8rem;
+
+    background: red;
+    background: url('http://m.wxqing.cn/static/image/set.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .avatar
+{
+    overflow: hidden;
+
+    width: 2rem;
+    height: 2rem;
+    margin: .53333rem auto;
+
+    opacity: 1;
+    border-radius: 2rem;
+}.user-info .login-page .login-ed .avatar img
+{
+    width: 100%;
+}.user-info .login-page .login-ed .name
+{
+    font-size: .45333rem;
+}.user-info .login-page .login-ed .myMoney
+{
+    width: 6.66667rem;
+    margin: 0 auto;
+
+    border-top: 1px solid #e7e4e4;
+    border-bottom: 1px solid #e7e4e4;
+}.user-info .login-page .login-ed .myMoney .gold,
+.user-info .login-page .login-ed .myMoney .jifen,
+.user-info .login-page .login-ed .myMoney .zuanshi
+{
+    height: .8rem;
+    margin: .26667rem 0;
+}.user-info .login-page .login-ed .myMoney .gold div,
+.user-info .login-page .login-ed .myMoney .jifen div,
+.user-info .login-page .login-ed .myMoney .zuanshi div
+{
+    line-height: .8rem;
+
+    float: left;
+}.user-info .login-page .login-ed .myMoney .gold .icon,
+.user-info .login-page .login-ed .myMoney .jifen .icon,
+.user-info .login-page .login-ed .myMoney .zuanshi .icon
+{
+    width: .8rem;
+    height: .8rem;
+
+    background: url('/images/gold.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .myMoney .gold .count,
+.user-info .login-page .login-ed .myMoney .jifen .count,
+.user-info .login-page .login-ed .myMoney .zuanshi .count
+{
+    font-size: .53333rem;
+    font-weight: 700;
+
+    margin-left: .53333rem;
+}.user-info .login-page .login-ed .myMoney .gold .btn,
+.user-info .login-page .login-ed .myMoney .jifen .btn,
+.user-info .login-page .login-ed .myMoney .zuanshi .btn
+{
+    font-size: .24rem;
+
+    float: right;
+
+    width: 2rem;
+    height: .8rem;
+
+    border-radius: .06667rem;
+    background: #ebff00;
+}.user-info .login-page .login-ed .myMoney .gold .icon
+{
+    background: url('/images/gold.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .myMoney .gold .btn
+{
+    background: #ebff00;
+}.user-info .login-page .login-ed .myMoney .zuanshi .icon
+{
+    background: url('/images/gold.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .myMoney .zuanshi .btn
+{
+    background: #00ff8b;
+}.user-info .login-page .login-ed .myMoney .jifen .icon
+{
+    background: url('http://m.wxqing.cn/static/image/jifen.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .myMoney .jifen .btn
+{
+    color: #fff;
+    background: #2f0233;
+}.user-info .login-page .login-ed .change,
+.user-info .login-page .login-ed .history,
+.user-info .login-page .login-ed .home,
+.user-info .login-page .login-ed .msg
+{
+    width: 6.66667rem;
+    height: .53333rem;
+    margin: 0 auto;
+    padding: .26667rem 0;
+
+    border-bottom: 1px solid #e7e4e4;
+}.user-info .login-page .login-ed .change .icon,
+.user-info .login-page .login-ed .history .icon,
+.user-info .login-page .login-ed .home .icon,
+.user-info .login-page .login-ed .msg .icon
+{
+    float: left;
+
+    width: .53333rem;
+    height: .53333rem;
+
+    background: url('http://m.wxqing.cn/static/image/history.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .change .text,
+.user-info .login-page .login-ed .history .text,
+.user-info .login-page .login-ed .home .text,
+.user-info .login-page .login-ed .msg .text
+{
+    line-height: .53333rem;
+
+    float: left;
+
+    margin-left: .26667rem;
+}.user-info .login-page .login-ed .home .icon
+{
+    background: url('http://m.wxqing.cn/static/image/home.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .change .icon
+{
+    background: url('http://m.wxqing.cn/static/image/duihuan.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .msg .icon
+{
+    background: url('http://m.wxqing.cn/static/image/msg.png') no-repeat;
+    background-size: contain;
+}.user-info .login-page .login-ed .no-phone
+{
+    margin-top: 2rem;
+}.user-info .login-page .login-ed .no-phone .phone-input input
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    display: block;
+
+    width: 5.6rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    margin-top: .26667rem;
+    padding: 0 .26667rem;
+
+    border: 1px solid #e2e2e2;
+    border-radius: .13333rem;
+}.user-info .login-page .login-ed .no-phone .code
+{
+    width: 6.13333rem;
+    height: 1.33333rem;
+    margin: .26667rem auto;
+}.user-info .login-page .login-ed .no-phone .code input
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    display: block;
+    float: left;
+
+    width: 2.66667rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    padding: 0 .26667rem;
+
+    border: 1px solid #e2e2e2;
+    border-radius: .13333rem;
+}.user-info .login-page .login-ed .no-phone .code .code-btn
+{
+    font-size: .26667rem;
+    line-height: 1.33333rem;
+
+    float: right;
+
+    width: 2.26667rem;
+    height: 1.33333rem;
+
+    text-align: center;
+
+    border-radius: .13333rem;
+    background: #79f1a4;
+}.user-info .login-page .login-ed .no-phone .code .code-btn-ing
+{
+    color: #fff;
+    background: #acafad;
+}.user-info .login-page .login-ed .no-phone .error-msg
+{
+    font-size: 12px;
+
+    text-align: center;
+
+    color: red;
+}.user-info .login-page .login-ed .no-phone .login-btn
+{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+
+    width: 6rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .13333rem;
+    background: #2f0233;
+}.user-info .login-page .download
+{
+    margin: 0 auto;
+}.user-info .login-page .download img
+{
+    display: block;
+
+    width: 60%;
+    margin: 0 auto;
+}.user-info .login-page .download .btn
+{
+    font-size: .34667rem;
+
+    width: 5.6rem;
+    margin: .66667rem auto;
+
+    border-radius: 5px;
+    background: #63f798;
+}.user-info .login-page .download .qrcode
+{
+    width: 3.33333rem;
+    margin-top: .66667rem;
+}.user-info .login-page-show
+{
+    -webkit-transition: -webkit-transform .3s ease;
+            transition: -webkit-transform .3s ease;
+            transition:         transform .3s ease;
+            transition:         transform .3s ease,-webkit-transform .3s ease;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}.login-loading
+{
+    font-size: .53333rem;
+    line-height: 6.66667rem;
+
+    position: fixed;
+    z-index: 200;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    background: #fff;
+}

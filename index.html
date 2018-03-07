@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOGO电竞</title>
+    <base href="http://localhost:8080/">
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="keywords" content="GOGO电竞,竞猜,大亨,游戏,LOL,守望先锋,王者荣耀,CSGO,星际争霸2,dota2,LPL,KPL,S系列赛,TI,电竞直播,饰品交易,竞币,游戏数据查询,竞猜商城,电竞菠菜,电竞竞猜,赛事互动,赛事平台,"/>
+    <meta name="description" content="GOGO电竞，竞猜成就大亨。一站式享受实名专家及电竞红人的专业分析，赛事、战队、选手数据一应俱全，让你实时掌握赛事一手，观赛、竞猜更轻松！"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="shortcut icon" href="static/images/etc_logo_200.png">
+
+    <script>
+        /*if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }*/
+
+        (function () {
+            var d = window, a = document.documentElement, e;
+            c();
+            a.setAttribute("data-dpr", d.devicePixelRatio);
+            d.addEventListener("resize", b, false);
+            d.addEventListener("pageshow", function (f) {
+                f.persisted && b()
+            }, false);
+            function b() {
+                clearTimeout(e);
+                e = setTimeout(c, 300)
+            }
+            function c() {
+                var f = a.getBoundingClientRect().width;
+                if (f <= 750) {
+                    d.rem = a.getBoundingClientRect().width / 10
+                } else {
+                    d.rem = 75;
+                }
+                a.style.fontSize = d.rem + "px";
+            }
+        })();
+    </script>
+    <link type="text/css" rel="stylesheet" href="static/css/index.css">
+    <link type="text/css" rel="stylesheet" href="static/css/recharge.css">
+    <link type="text/css" rel="stylesheet" href="static/css/title.css">
+    <link type="text/css" rel="stylesheet" href="static/css/downALert.css">
+    <link type="text/css" rel="stylesheet" href="static/css/guild.css">
+    <link type="text/css" rel="stylesheet" href="static/css/loading.css">
+    <link type="text/css" rel="stylesheet" href="static/css/login.css">
+    <link type="text/css" rel="stylesheet" href="static/css/swiper.css">
+    <link type="text/css" rel="stylesheet" href="static/css/Home.css">
+    <link type="text/css" rel="stylesheet" href="static/css/raceList.css">
+    <link type="text/css" rel="stylesheet" href="static/css/window.css">
+    <link type="text/css" rel="stylesheet" href="static/dropload/dropload.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body style="margin:0;padding: 0;opacity: 1;">
+    <div id="container" class="container pc">
+        <!--通用消息弹窗 开始-->
+        <div class="msg">
+            <div class="msg-bg"></div>
+            <div class="msg-info">
+                <h1><b>提示消息</b><i></i></h1>
+                <dl><dt></dt><dd></dd></dl>
+            </div>
+        </div>
+
+        <div class="window">
+
+            <!--弹窗半透明遮罩背景-->
+            <div class="window-bg"></div>
+
+            <!--支持弹窗 开始-->
+            <div class="window-support"><h1><b>支持 X</b><i></i></h1> <div><ul></ul></div></div>
+
+            <!--下注弹窗 开始-->
+            <div class="window-betpay window-all">
+                    <h1><b>竞猜投注</b><i></i></h1>
+                    <ul>
+                    <li><i class="title"> 最终获胜 KSV</i><i class="rate">赔率：1.72</i></li>
+                    <li>
+                        <input onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" class="gold" value="100" placeholder="投注金币">
+                        <i class="btn-join">投注</i>
+                    </li>
+                    <li>当前赔率按照各竞猜项投注而变动，结算赔率以封盘时为准！</li>
+                    <li><i>单次投注</i><i>10 ~ 100000</i></li>
+                    <li><i>我的金币</i><i class="my-gold">0</i></li>
+                </ul>
+            </div>
+        </div>
+         <div id="Home">
+         </div>
+    </div>
+    
+    
+    <script type="text/html" id="home">
+            <div class="user-info">
+                <div>
+                    <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
+                        <div class="dot"></div>
+                    </div>
+                    <div onclick="bindedLoginShow();" class="user-name">
+                        <div class="name">[username]</div>
+                        <div class="gold">
+                            <div class="icon"></div>
+                            <div class="icon-count">[coin]</div>
+                        </div>
+                    </div>
+                      
+                    <div class="goHome-link">
+                        <a href="static/index.html">
+                            <div class="goHome"></div>
+                        </a>
+                    </div>
+
+                    <div class="detail-link">
+                        <a href="static/shop.html">
+                            <div class="shop">
+                                <span class="shop-span"></span>
+                            </div>
+                        </a>
+                        <!-- <a href="static/shopCart.html">
+                            <div class="myCar">
+                                <div class="car-count">[carcount]</div>
+                            </div>
+                        </a> -->
+                    </div>
+                </div>
+                <div id="mask" class="huiIN"></div>
+            </div>
+    </script>
+
+    <script type="text/html" id="nologin">  
+        <div id='login-page' class='login-page' style='transform: translateX(-100%); position: fixed;'>
+            <div class='no-login'>
+                <div class='phone-input'>
+                    <input id='phone-input' type='number' class='input' oninput='if(value.length>11)value=value.slice(0,11)'  value='' placeholder='请输入手机号'>
+                </div>
+                <div class='code'>
+                    <input id='code' type='number' value='' placeholder='请输入验证码'>
+                    <div class='code-btn' onclick='getCode();'>获取验证码</div>
+                </div>
+                <div class='error-msg'></div>
+                <div class='login-btn' onclick='login();'>登录</div>
+                <div class='login-other' style="display: none;">
+                    <div class='division'></div>
+                    <div class='btn'>
+                        <div class='btn-wx isNotWx'></div>
+                    </div>
+                </div>
+                <div class='downLink'></div>
+                <div class='download'>
+                    <div class='btn' onclick='downLoadApp();'>下载GOGO电竞APP，拿千元红包</div>
+                    <img src='static/images/user/qrcode-gzh.png' alt=''>
+                </div>
+            </div>
+            <div class='back' onclick='bindLoginHide();'></div>
+        </div>
+    </script>
+
+    <script type="text/html" id="logined">
+        <div id='login-page' class='login-page' style='transform: translateX(-100%); position: fixed;'>
+            <div class='login-ed'>
+                <div class='setBtn'></div>
+                <div class='quitBtn' onclick="signOut();"></div>
+                <div class='avatar' style="background: url('[avatar]') center center / cover no-repeat;"></div>
+                <div class='name'>[username]</div>
+                <div class='myMoney'>
+                    <div class='gold'>
+                        <div class='icon'></div>
+                        <div class='count'>[coin]</div>
+                        <a href='static/recharge.html'>
+                            <div class='btn'>充值</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class='msg'>
+                    <div class='icon'></div>
+                    <div class='text'>地址信息</div>
+                </div> -->
+                <div class='history'>
+                    <div class='icon'></div>
+                    <a href='static/history.html'>
+                        <div class='text'>竞猜历史</div>
+                    </a>
+                </div>
+                <!-- <div class='change' >
+                    <div class='icon'></div>
+                    <div class='text'>兑换记录</div>
+                </div> -->
+            </div>
+            <div class='back' onclick='bindLoginHide();'></div>
+        </div>
+    </script>
+    
+    <script type="text/html" id="marquee">
+        <div class='marquee'>
+            <div class="swiper-container marquee">
+                
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="HomeNav">
+        <div class="HomeNav">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                        <div class="nav-btn active-nav">
+                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/f7b9985b34db0daf3dc7c74ff879d38f.png&quot;) 0% 0% / cover no-repeat;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next">
+                        <div class="nav-btn">
+                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/f6d27aee9c5f909682a73a039c772054.png&quot;) 0% 0% / cover no-repeat;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="nav-btn">
+                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/31ea4a4981b973447ebc777cd5f9718e.png&quot;) 0% 0% / cover no-repeat;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><div class="nav-btn">
+                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/9d078e43860c25f196aa91591675073d.png&quot;) 0% 0% / cover no-repeat;"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="nav-btn">
+                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/1f7660c2a974058c14bcc3749326415e.png&quot;) 0% 0% / cover no-repeat;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="nav-btn">
+                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/b9e2eac8740e99b7fbc919ef46340d5c.png&quot;) 0% 0% / cover no-repeat;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="nav-btn">
+                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/278409307d0fa8ae7b4b3648ddf78413.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/88a64e1f336a91fc9d02109196e11909.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/6c6b9d886eac1fd29747c03716575784.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/32327f7b070efb90b8c7918fa46e2ed9.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/741e9e747309b140ced33a9fc949bf93.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/d4499abad854e957712f90b84be1fdd9.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/eda09e3978a44c542bbfc2969eb3d128.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/b1af66d4753f36426f9d3d1badd6aa9a.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/a240a6005f2789da048223c1cf7c3606.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/660a9e0d171634ade768ee158580f862.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/bd6dbf56a2bab7effcbf9fb6ee524779.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/28c8c3b73b6db662b08292e758ed5821.png&quot;) 0% 0% / cover no-repeat;"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="HomeList">
+        <div class="HomeList">
+            <div class="lists">
+            
+            </div>
+        </div>  
+    </script>
+
+    <script type="text/html" id="Bottom-Link">
+        <div class="Bottom-Link">
+            <div class="bottom-close"></div>
+            <div class="swiper-container buttom">
+                <div class="swiper-wrapper">
+                     <div class="swiper-slide" onclick="downLoadApp();"><img class="slider-img" src="static/images/bottom/bottom-1.png" alt=""></div>
+                     <div class="swiper-slide"><img class="slider-img" src="static/images/bottom/bottom-2.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="[activityLogincss]">
+                <div class="postion-bottom">
+                    <div class="alert-bg">
+                        <div class="name">登录领取奖励</div>
+                        <div>
+                            <img class="alert-bg-img" alt="" src="static/images/bottom/66050a32a3195facf6f08532b7cccb09.jpeg">
+                        </div>
+                        <div class="getBox">
+                            <img class="get" src="static/images/bottom/get.png" alt="">
+                            <img class="getBtn" src="static/images/bottom/getBtn.png" alt="" id="getBtnToOpenLogin">
+                        </div>
+                        <div class="tip">小提示：H5注册登录后查看账户就有1000竞币入账。</div>
+                        <div class="downLoad">安装APP再送1000下注金</div>
+                        <div class="close" onclick="bindedActivityClose();"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+    <script type="text/html" id="shop">
+        <div id='title' class='title' >
+            <div class='back-btn' onclick='window.history.go(-1);'></div>
+                <div class='title-name'>商城</div>
+                <!-- <div class='right-div'>
+                    <a href='index.html/#/home/exchangeRecord'>兑换记录</a>
+                </div> -->
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="shopCart">
+        <div class='title'>
+            <div class='back-btn'></div>
+                <div class='title-name'>结算单</div>
+            </div>
+        </div>
+        <div class='settlement'>
+            <div class='settlementList'>
+                <div class='alert-layer '>请在微信浏览器打开</div>
+            </div>
+            <div class='Total'>
+                <div class='handle'>
+                    <div class='all-select'><div class='select '></div>全选</div>
+                    <div class='btn'>马上投注</div>
+                    <div class='all'>
+                        <div class='gold-icon'>
+                    </div>
+                    <div class='aGame-total'>0</div>
+                </div>
+                <div>合计：</div>
+            </div>
+            <div class='clear-go'>
+                <div class='clear'>清空</div>
+                <div class='friendPay'>好友代付</div>
+                    <a href='#/recharge'>
+                        <div class='btn'>竞币不足?<span>获取竞币&gt;&gt;</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html"  id="foot">
+        <div class="foot">
+            <div class="all-width">
+                <p>
+                    <a href="http://www.bjwh.gov.cn/bjwh/bsfw/cxfw/whqy/514606642327799-16-20140422/index.html" target="_blank">京网文【2017】2950-347号</a><br>
+                    Copyright © 2018 北京擎天网络科技有限公司.
+                    
+                    <!-- <a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备号</a> -->
+                </p>
+            </div>
+        </div>
+    </script>
+
+
+    <div id="am-modal-container" style="display: none;">
+        <div>
+            <div class="am-modal-mask"></div>
+            <div class="am-modal-wrap " role="dialog" aria-labelledby="体验完整功能">
+                <div role="document" class="am-modal am-modal-transparent">
+                    <div class="am-modal-content">
+                        <div class="am-modal-header">
+                            <div class="am-modal-title">体验完整功能</div>
+                        </div>
+                        <div class="am-modal-body">
+                            <div class="am-modal-alert-content">请下载 GOGO电竞 APP</div>
+                        </div>
+                        <div class="am-modal-footer">
+                            <div class="am-modal-button-group-h am-modal-button-group-normal" role="group">
+                                <a class="am-modal-button" role="button" onclick="$('#am-modal-container').hide();">取消</a>
+                                <a class="am-modal-button" role="button" onclick="downLoadApp();">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="static/Swiper-4.1.0/js/swiper.min.js"></script>
+<script type="text/javascript" src="static/dropload/dropload.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script> -->
+<!-- <script type="text/javascript" src="static/js/route.js"></script> -->
+<!-- <script type="text/javascript" src="static/js/index.bottom.js"></script> -->
+<script type="text/javascript" src="static/js/index.common.js"></script>
+<script type="text/javascript" src="static/js/index.init.js"></script>
+<script type="text/javascript" src="static/js/index.user.js"></script>
+<script type="text/javascript">
+
+//msg弹窗打开关闭通用事件----------------------------------------------------------------
+//打开
+function msg_show(auto,info,bnt,callback){
+  $(".msg").fadeTo(200,1);
+  if(callback!=null){
+      callback($(".msg .msg-info dd"));
+  }
+  $(".msg .msg-info dt").text(info);
+  if(bnt!=null){
+      $(".msg .msg-info dd").text(bnt).show();
+      
+  }
+  if(auto==true){
+      setTimeout(function(){
+          $(".msg").fadeOut(200,function(){
+              $(".msg .msg-info dt").empty();
+          });
+      },1200);
+  }
+}
+//关闭
+$(".msg .msg-bg,.msg h1 i").click(function(){
+  $(".msg").fadeOut(200,function(){
+      $(".msg .msg-info dt,.msg .msg-info dd").empty();
+      $(".msg .msg-info dd").hide();
+      $(".menu_bar").hide();
+  });
+});
+
+//关闭
+$(".buy .buy-bg,.buy h1 i").unbind().click(function(){
+    $(".buy").fadeOut(200,function(){
+    });
+});
+
+//window弹窗打开关闭通用事件----------------------------------------------------------------
+//打开
+function window_show(name,id,callback){
+    $(".window-"+name).show();
+    $(".window-bg").show();
+    $(".window").fadeTo(200,1);
+    if(callback!=null){
+        callback();
+    }
+    
+    //id 为商城的标签id，非商城弹窗勿用
+    if(id!=null){
+        $(".window-"+name+"-menu").children().removeClass();
+        $(".window-"+name+"-menu").children().eq(id).addClass("window-"+name+"-menu-click");
+        $(".window-"+name+"-list").children().hide();
+        $(".window-"+name+"-list").children().eq(id).show();
+    }
+}
+//关闭
+$(".window-bg,.window h1 i").click(function(){
+    $(".window").fadeOut(200,function(){
+        $(".window").children().hide();
+        $(".window h2").parent().hide();
+        $(".window iframe").attr("src","iframeload.html");
+    });
+});
+
+</script>
+
+</html>

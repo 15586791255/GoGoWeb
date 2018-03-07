@@ -1,0 +1,169 @@
+a:hover
+{
+    text-decoration: none;
+}a:active
+{
+    opacity: .5;
+}ol,
+ul
+{
+    list-style: none;
+}.body
+{
+    font-size: .32rem;
+
+    margin-top: .66667rem;
+}.body .list
+{
+    line-height: .66667rem;;
+
+    width: 85%;
+    height: .66667rem;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #eee;
+}.body .list .name
+{
+    float: left;;
+
+    width: 30%;
+}.body .list .number
+{
+    float: left;
+}.body .btn
+{
+    font-size: .21333rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    width: 60%;
+    height: 30px;
+    margin: .26667rem auto;;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: #02aaf1;
+}.body .btn,
+.body .note-help
+{
+    text-align: center;
+}#foot
+{
+    position: absolute;
+    bottom: 15px;
+
+    width: 100%;;
+    margin-top: 10px;
+}.foot-ul li
+{
+    width: 100%;
+
+    text-align: center;
+
+    color: #666;
+}.note-help
+{
+    font-size: 12px;
+    line-height: 130%;
+
+    display: block;;
+
+    width: 100%;
+    margin-top: 5px;
+
+    color: #999;
+}#btn-dd
+{
+    margin: 20px;
+
+    text-align: center;
+}.foot-ul,
+.one_line
+{
+    width: 100%;
+}.one_line
+{
+    display: block;
+
+    height: 1px;
+    margin-left: 20px;;
+
+    border: 0;
+    border-top: 1px solid #eee;
+}.am-header
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 7px 0;
+
+    text-align: center;
+
+    background: #1d222d;
+
+        -ms-box-sizing: border-box;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            box-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            box-align: center;
+}.am-header h1
+{
+    font-size: 18px;;
+
+    padding-right: 20px;
+
+    text-align: center;
+}.am-header h1,
+.am-header span
+{
+    font-weight: 300;
+    line-height: 18px;
+
+    color: #fff;;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+            box-flex: 1;
+}.am-header span
+{
+    font-size: 14px;
+
+    padding-left: 10px;;
+
+    text-align: left;
+}.wx-alert
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.6);
+}.wx-alert .img
+{
+    position: absolute;
+    top: .66667rem;
+    right: .66667rem;
+
+    width: 6.66667rem;
+    height: 4rem;
+
+    background: url('http://m.wxqing.cn/static/image/wx_alert.png') no-repeat;
+    background-size: contain;
+}.wx-alert-show
+{
+    display: block;
+}
