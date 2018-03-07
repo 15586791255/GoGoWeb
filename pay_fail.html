@@ -1,0 +1,63 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%@ include file="/WEB-INF/back_include/base-head.jsp"%>
+<title>山海旅游铁路</title>
+</head>
+<body>
+<%@ include file="/WEB-INF/include/page-navlist.jsp"%>
+	<div class="weui-tab">
+	<!-- navbar start -->
+		<div class="weui-navbar" style="background-color:#fefefe;">
+			<div class="weui-navbar__item weui-bar__item--on"
+				style="background-color:#0f85ff;">
+				<table width=100%">
+					<tr>
+						<td width="10%" align="left" valign="middle" onclick="javascript:history.go(-1);"><img
+							class="img-png-left" src="image/7.png"></td>
+						<td align="center" width="80%" valign="middle"
+							class="head-font">订单失败</td>
+						<td width="10%" align="right" valign="middle"
+							onclick="displayHideNavlist()"><img class="img-png-right"
+							src="image/8.png"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- navbar end -->
+		<div class="weui-tab__bd">
+			<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+				<div class="weui-flex">
+					<div class="weui-flex__item" style="text-align: center;">
+						<img src="image/fksb.png" style="height: 80px;width: 80px;margin-top: 39px;">
+					</div>				
+				</div>
+				<div class="weui-flex" style="margin-top: 37px;">
+					<div class="weui-flex__item" style="text-align: center;font-size: 18px;color: #333333;">订单失败
+					</div>
+				</div>
+				<div class="weui-flex" style="margin-top: 37px;">
+					<div class="weui-flex__item" style="text-align: center;">
+						<img onclick="ticketReservation();" src="image/qr.png" style="width: 95%;">
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- navbar end -->
+		<script type="text/javascript">
+			var basePath = $("base").attr("href");
+			
+			function ticketReservation() {
+				window.location.href = basePath + "wx/wx.toLogin.do";
+			}
+		</script>
+</body>
+</html>

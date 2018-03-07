@@ -1,0 +1,43 @@
+.downALert
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.5);
+}.downALert .down-alert
+{
+    position: relative;
+
+    width: 6.66667rem;
+    margin: 4rem auto;
+}.downALert .down-alert img
+{
+    width: 100%;
+}.downALert .down-alert .downALert-back
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+
+    width: 1.06667rem;
+    height: 1.06667rem;
+}.downALert .down-alert .link
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2.66667rem;
+}.downALert-show
+{
+    display: block;
+}

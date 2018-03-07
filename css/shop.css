@@ -1,0 +1,248 @@
+.ShopList
+{
+    padding-top: .26667rem;
+}.ShopList:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}.ShopList .listNav
+{
+    width: 100%;
+
+    background: #fff;
+}.ShopList .listNav .nav
+{
+    width: 95%;
+    height: .8rem;
+    margin: .26667rem auto;
+    margin-bottom: .53333rem;
+}.ShopList .listNav .nav-btn
+{
+    line-height: .8rem;
+
+    float: left;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;;
+    width: 20%;
+
+    text-align: center;
+
+    color: #ff0059;
+    border: 1px solid #ff0059;
+    background: #fff;
+}.ShopList .listNav .nav-btn:first-child
+{
+    border-radius: 5px 0 0 5px;
+}/*.ShopList .listNav .nav-btn:nth-child(3)
+{
+    border-radius: 0 5px 5px 0;
+}.ShopList .listNav .nav-btn:nth-child(4)
+{
+    border-radius: 0 5px 5px 0;
+}*/.ShopList .listNav .nav-btn:nth-child(5)
+{
+    border-radius: 0 5px 5px 0;
+}/*.ShopList .listNav .nav-btn:nth-child(2)
+{
+    width: 34%;
+}*/.ShopList .listNav .nav-btn-select
+{
+    color: #fff;;
+    background: #ff0059;
+}.ShopList .listNav-top
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+}.ShopList .list
+{
+    float: left;
+
+    width: 50%;
+    padding-bottom: .26667rem;
+}.ShopList .list .border
+{
+    width: 4.4rem;
+    margin: 0 auto;
+
+    text-align: center;
+}.ShopList .list .border .img-box
+{
+    padding: 1px;
+
+    background: red;
+    background: -webkit-gradient(linear,left top,left bottom,from(#05fce8),to(#4a0bab));
+    background: linear-gradient(#05fce8,#4a0bab);
+}.ShopList .list .border .img-box .img
+{
+    width: 4.34667rem;
+    height: 2.66667rem;
+}.ShopList .list .border .name
+{
+    font-size: .37333rem;
+    line-height: .42667rem;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: .4rem;
+    margin-top: .26667rem;;
+
+    text-align: center;
+
+    color: #3c0f40;
+}.ShopList .list .border .money
+{
+    font-size: .37333rem;
+
+    height: .8rem;
+    margin-top: .13333rem;;
+
+    color: #ff0059;
+}.ShopList .list .border .money span
+{
+    font-size: .34667rem;
+
+    vertical-align: top;
+}.ShopList .list .border .btn
+{
+    line-height: .53333rem;
+
+    width: 4rem;
+    height: .53333rem;
+    margin: .13333rem auto;;
+
+    background: #0af2ff;
+}.Detail
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #2f0233;
+}.Detail,
+.Detail input
+{
+    text-align: center;;
+
+    color: #fff;
+}.Detail input
+{
+    font-size: .45333rem;;
+
+    background: #441c48;
+}.Detail ::-webkit-input-placeholder
+{
+    color: #fff;
+}.Detail .close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 1.06667rem;
+}.Detail .detailImg
+{
+    display: block;
+
+    width: 3.33333rem;
+    margin: 0 auto;
+    margin-top: 1.33333rem;
+}.Detail .name
+{
+    font-size: .4rem;;
+    line-height: 1.06667rem;
+
+    height: 1.06667rem;
+}.Detail .description
+{
+    padding: .26667rem;
+
+    color: #999;
+}.Detail .phone,
+.Detail .qq
+{
+    margin-top: .26667rem;
+}.Detail .phone input,
+.Detail .qq input
+{
+    width: 9.33333rem;;
+    height: 1.06667rem;
+}.Detail .info
+{
+    font-size: .21333rem;
+    line-height: .8rem;;
+
+    color: #999;
+}.Detail .ruleBtn
+{
+    height: 1.06667rem;;
+
+    color: #00f2ff;
+}.Detail .ruleBtn,
+.Detail .stock-limit
+{
+    line-height: .8rem;
+}.Detail .stock-limit .number
+{
+    color: #00f2ff;
+}.Detail .count
+{
+    height: 1.06667rem;
+}.Detail .nbsp
+{
+    opacity: 0;
+}.Detail .gold
+{
+    font-size: .4rem;
+    line-height: 1.33333rem;
+}.Detail .gold span
+{
+    color: #00f2ff;
+}.Detail .btn
+{
+    font-size: .4rem;;
+    line-height: 1.06667rem;
+
+    width: 5.33333rem;
+    height: 1.06667rem;
+    margin: 0 auto;
+
+    color: #2f0233;
+    background: #00f2ff;
+}.Detail .noGold
+{
+    font-size: .4rem;;
+
+    margin-top: .26667rem;
+
+    color: #00f2ff;
+}.Detail .noGold span
+{
+    text-decoration: underline;
+}.rules
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.5);
+}.rules .box
+{
+    width: 70%;
+    margin: 2.66667rem auto;
+    padding: 1.33333rem .26667rem;
+
+    color: #333;
+    border-radius: .26667rem;;
+    background: #fff;
+}

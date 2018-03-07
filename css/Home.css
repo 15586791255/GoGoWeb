@@ -1,0 +1,619 @@
+#Home{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction:column;
+    -webkit-box-orient:vertical;
+    box-orient:vertical;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+}.lll
+{
+    height: 1000px;
+}.circle-load
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 200px;
+    height: 200px;
+
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}.circle-load-svg
+{
+    -webkit-animation: rot 1s linear infinite;
+            animation: rot 1s linear infinite;
+
+    stroke-dasharray: 0 570;
+}@-webkit-keyframes rot
+{
+    to
+    {
+        stroke-dasharray: 570 570;
+    }
+}@keyframes rot
+{
+    to
+    {
+        stroke-dasharray: 570 570;
+    }
+}.marquee
+{
+    line-height: 25px;
+
+    overflow: hidden;
+
+    height: 25px;
+    padding: 0 .4rem;
+
+    background: #fafafa;
+}.marquee .marquee-list
+{
+    display: block;
+    overflow: hidden;
+
+    height: 25px;
+}.timeNav
+{
+    position: relative;
+
+    width: 100%;
+    height: .73333rem;
+
+    color: #fff;
+    background: #2f0233;
+}.timeNav .icon-btn
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: .73333rem;
+    height: .73333rem;
+
+    background: url('http://m.wxqing.cn/static/image/sj-icon.png') no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+}.timeNav .right-btn
+{
+    right: 0;
+    left: auto;
+
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}.timeNav .nav
+{
+    line-height: .73333rem;
+
+    width: 100%;
+    padding: 0 .73333rem;
+
+    text-align: center;
+}.timeNav .nav .nav-btn
+{
+    font-size: .26667rem;
+
+    float: left;
+
+    width: 14%;
+}.timeNav .nav .two-text
+{
+    width: 10%;
+}.timeNav .nav .active
+{
+    color: #ff0059;
+}.HomeNav .nav-btn-box
+{
+    font-size: .4rem;
+    line-height: .66667rem;
+
+    padding: .26667rem;
+
+    color: #2f0233;
+    background: #f5f5f5;
+}.HomeNav .nav-btn-box .activeGame
+{
+    float: left;
+}.HomeNav .nav-btn-box .activeGame .activeImg
+{
+    float: left;
+
+    width: .66667rem;
+    height: .66667rem;
+}.HomeNav .nav-btn-box .select
+{
+    float: right;
+}.HomeNav .nav-btn-box .select .selectImg
+{
+    float: left;
+
+    width: .46667rem;
+    height: .46667rem;
+    margin-top: .09333rem;
+    margin-right: .13333rem;
+
+    background: url('http://m.wxqing.cn/static/image/select-icon.png') no-repeat;
+    background-size: contain;
+}.HomeNav .nav-btn-box:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}.HomeNav .alertNav
+{
+    font-size: .4rem;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    overflow: scroll;
+
+    width: 100%;
+    height: 100%;
+
+    color: #000;
+    background: #fff;
+}.HomeNav .alertNav .close
+{
+    position: absolute;
+    top: .26667rem;
+    right: .26667rem;
+
+    width: .53333rem;
+    height: .53333rem;
+
+    background: url('http://m.wxqing.cn/static/image/close-2.png') no-repeat;
+    background-size: contain;
+}.HomeNav .alertNav .title-name
+{
+    line-height: 1.06667rem;
+
+    text-align: center;
+}.HomeNav .alertNav .nav-btn
+{
+    line-height: .4rem;
+
+    float: left;
+
+    width: 3.33333rem;
+    height: 3.33333rem;
+
+    text-align: center;
+}.HomeNav .alertNav .active-nav
+{
+    color: #2f0233;
+    background: #fff;
+}.HomeNav .arrow
+{
+    position: absolute;
+    top: .26667rem;
+    right: .13333rem;
+
+    width: .42667rem;
+
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+}.HomeNav .arrow,
+.HomeNav .arrow-top
+{
+    -webkit-transition: .1s;
+            transition: .1s;
+}.HomeNav .arrow-top
+{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}.HomeNav
+{
+    position: relative;
+    z-index: 1;
+
+    color: #fff;
+}.HomeNav .swiper-container
+{
+    width: 100%;
+    height: 1rem;
+}.HomeNav .swiper-container .swiper-slide
+{
+    width: 1rem;
+    height: 1rem;
+
+    background: #2f0233;
+}.HomeNav .swiper-container .swiper-slide .nav-btn
+{
+    width: .86667rem;
+    height: .86667rem;
+    margin: .06667rem;
+
+    background: #fff;
+}.HomeNav .swiper-container .swiper-slide .active-nav
+{
+    background: #ebff00;
+}.HomeNav .swiper-container .swiper-slide .game
+{
+    width: .86667rem;
+    height: .86667rem;
+}.HomeNavTop
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+}.HomeList
+{   font-size: .26667rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #fff;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}.HomeList img
+{
+    display: block;
+
+    width: 50%;
+    margin: 0 auto;
+}.HomeList .list
+{
+    border-bottom: 1px solid #eee;
+}.HomeList .list .detail
+{
+    padding: .26667rem;
+}.HomeList .list .team-name
+{
+    margin-top: .13333rem;
+
+    text-align: center;
+}.HomeList .list .left
+{
+    float: left;
+
+    width: 25%;
+}.HomeList .list .center
+{
+    float: left;
+
+    width: 50%;
+}.HomeList .list .center .btn
+{
+    font-weight: 100;
+    line-height: .6rem;
+
+    width: 2.26667rem;
+    height: .53333rem;
+    margin: 0 auto;
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #fff;
+}.HomeList .list .center .btn div
+{
+    display: none;
+}.HomeList .list .center .btn .end,
+.HomeList .list .center .btn .ing,
+.HomeList .list .center .btn .not-start
+{
+    display: block;
+
+    border-radius: .06667rem;
+    background: #ff0059;
+}.HomeList .list .center .btn .end
+{
+    color: #555;
+    border: 1px solid #555;
+    border-radius: .06667rem;
+    background: #fff;
+}.HomeList .list .center div
+{
+    text-align: center;
+}.HomeList .list .center .name,
+.HomeList .list .center .time
+{
+    line-height: .53333rem;
+
+    overflow: hidden;
+}.HomeList .list .center .name
+{
+    margin-top: .13333rem;
+}.HomeList .list .right
+{
+    float: right;
+
+    width: 25%;
+}.HomeList .list .show-div
+{
+    clear: both;
+
+    width: 100%;
+    height: .4rem;
+}.HomeList .list .show-div .race-id
+{
+    display: none;
+}.HomeList .list .show-div .rotate-dowm
+{
+    width: .53333rem;
+    height: .4rem;
+    margin: 0 auto;
+
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+
+    background: url('http://m.wxqing.cn/static/image/top_03.png') no-repeat;
+    background-size: contain;
+}.HomeList .list .show-div .rotate-top
+{
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+}.HomeList .detail .time
+{
+    margin-top: .13333rem;
+}.HomeList .detail:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}.detail-list
+{
+    overflow: hidden;
+
+    height: 0;
+
+    -webkit-transition: .5s;
+            transition: .5s;
+
+    background: #eee;
+}.detail-list .inList
+{
+    font-weight: 700;
+}.detail-list .inList .name
+{
+    padding: .26667rem;
+
+    text-align: center;
+}.detail-list .inList .betOptionList
+{
+    line-height: .53333rem;
+
+    padding: .26667rem .66667rem;
+
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}.detail-list .inList .betOptionList .status
+{
+    line-height: .53333rem;
+
+    float: right;
+
+    width: 1.33333rem;
+    height: .53333rem;
+
+    text-align: center;
+
+    color: #fff;
+    background: #ff0059;
+}.detail-list .inList .betOptionList .added
+{
+    background: #999;
+}.detail-list .inList .betOptionList .suspend
+{
+    background: #eb6100;
+}.show
+{
+    height: auto;
+
+    -webkit-transition: .5s;
+            transition: .5s;
+}.addAnimatedDiv
+{
+    font-size: 12px;
+    line-height: 20px;
+
+    position: fixed;
+
+    width: 20px;
+    height: 20px;
+
+    -webkit-transition: all 2s;
+            transition: all 2s;
+    text-align: center;
+
+    background: #eee;
+}.Bottom-Link
+{
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+}.Bottom-Link .bottom-close
+{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+
+    width: 10%;
+    height: 100%;
+}.Bottom-Link .slider-img
+{
+    width: 100%;
+    display: block;;
+}.Bottom-Link .alert
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.3);
+}.Bottom-Link .alert img
+{
+    display: block;
+}.Bottom-Link .alert .qr
+{
+    width: 5.33333rem;
+    margin: 0 auto;
+    margin-top: 3.33333rem;
+}.Bottom-Link .alert .open-close
+{
+    width: 2rem;
+    margin: .66667rem auto;
+}.Bottom-Link-close
+{
+    display: none;
+}.activity-Login
+{
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.5);
+}.activity-Login .postion-bottom
+{
+    position: absolute;
+    bottom: 4rem;
+
+    width: 100%;
+}.activity-Login .alert-bg
+{
+    position: relative;
+
+    width: 8rem;
+    margin: 0 auto;
+    padding: .53333rem 0;
+
+    background: #00f2ff;
+}.activity-Login .alert-bg .name
+{
+    font-size: .66667rem;
+    font-weight: 700;
+
+    text-align: center;
+}.activity-Login .alert-bg img
+{
+    display: block;
+
+    width: 100%;
+}.activity-Login .alert-bg .getBox
+{
+    position: relative;
+
+    width: 6.66667rem;
+    margin: .4rem auto;
+}.activity-Login .alert-bg .getBox .get
+{
+    width: 4.53333rem;
+    height: 1.73333rem;
+}.activity-Login .alert-bg .getBox .getBtn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 1.73333rem;
+    height: 1.73333rem;
+}.activity-Login .alert-bg .tip
+{
+    font-size: .4rem;
+
+    width: 6.66667rem;
+    margin: 0 auto;
+}.activity-Login .alert-bg .downLoad
+{
+    font-size: .45333rem;
+    font-weight: 400;
+    line-height: 1.06667rem;
+
+    width: 6.66667rem;
+    height: 1.06667rem;
+    margin: 0 auto;
+    margin-top: .13333rem;
+
+    text-align: center;
+
+    color: #ebff00;
+    border-radius: 5px;
+    background: #2f0233;
+}.activity-Login .alert-bg .close
+{
+    position: absolute;
+    bottom: -2rem;
+    left: 3.33333rem;
+
+    width: 1.33333rem;
+    height: 1.33333rem;
+
+    background: url('http://m.wxqing.cn/static/image/bottom-close.png') no-repeat;
+    background-size: contain;
+}.noviceBoot
+{
+    position: fixed;
+    right: .26667rem;
+    bottom: 2.66667rem;
+
+    width: 1.6rem;
+}
+.activity-Login-close{
+    display: none;
+}.HomeList .hlist .history
+{
+    float: left;
+
+    width: 100%;
+}.HomeList .hlist .history .title
+{   
+    font-size: .4666rem;
+    line-height: .83333rem;
+    border-bottom: 1px solid #e7e4e4;
+    overflow: hidden;
+}.HomeList .hlist .history .time
+{
+    line-height: .73333rem;
+    border-bottom: 1px solid #e7e4e4;
+    overflow: hidden;
+}.HomeList .hlist .history .race
+{
+    line-height: .73333rem;
+    border-bottom: 1px solid #e7e4e4;
+    overflow: hidden;
+}.HomeList .hlist .history .batting
+{
+    line-height: .73333rem;
+    border-bottom: 1px solid #e7e4e4;
+    overflow: hidden;
+}.HomeList .hlist .history .guessing
+{
+    line-height: .73333rem;
+    border-bottom: 1px solid #e7e4e4;
+    overflow: hidden;
+}
+.HomeList .hlist .history .result
+{
+    line-height: .73333rem;
+    overflow: hidden;
+}
+.HomeList .hlist .detail {
+    padding: .26667rem;
+}
