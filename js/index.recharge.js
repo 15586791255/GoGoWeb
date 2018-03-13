@@ -67,11 +67,11 @@ function sendRquest() {
 
 
 function selectamount() {
-    $("div.HomeList").find(".btn").click(function(){
+    $("div.HomeList").find(".img-box").click(function(){
         $("div.btn").each(function() {
             $(this).removeClass("btn-select");
         })
-        $(this).addClass("btn-select");
+        $(this).find(".btn").addClass("btn-select");
         var amoutnstr = $(this).text();
         var amount = amoutnstr.substring(1, amoutnstr.length);
         var coin_plan_id = $(this).find("input[type=hidden]").val();
