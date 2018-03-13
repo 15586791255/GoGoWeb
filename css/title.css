@@ -56,13 +56,15 @@
     position: absolute;
     width: 1.06667rem;
     height: 1.06667rem;
-}#title .renovate-btn{
-    position: absolute;
-    top: 0;
     right: 0;
-    width: 1.06667rem;
+    top: 0;
+}#title. renovate a{
+    display: block;
+}#title .renovate-btn{
     height: 1.06667rem;
-    background: url('/images/renovate.png') no-repeat;
+    background: url(/images/renovate.png) no-repeat;
     background-position: 50%;
     background-size: 50%;
+    line-height: 1.06667rem;
+    display: block;
 }
