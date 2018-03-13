@@ -3,7 +3,7 @@ function bindBtn() {
         javascript:history.back(-1);
     });
     $(document).on("click", ".renovate-btn", function(){
-        window.location.href = window.location.href + "?id="+10000 * Math.random();
+        window.location.href = $("base").attr("href") + testUrl + "room.html";
     });
 }
 
