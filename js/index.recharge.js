@@ -6,7 +6,6 @@ function bindedbackbtn() {
 
 $(function() {
     sendRquest();
-    bindedbackbtn();
 });
 
 function sendRquest() {
@@ -87,6 +86,7 @@ function initrecharge(_coin) {
         'coin_plan_id': _coin[0].coin_plan_id
       }[key]; });
     $("#Home").append(sourcerecharge);
+    bindedbackbtn();
 }
 
 function initamount(_amount, _coin_plan_id) {

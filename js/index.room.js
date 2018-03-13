@@ -1,6 +1,9 @@
-function bindedbackbtn() {
+function bindBtn() {
     $(document).on("click", ".back-btn", function(){
         javascript:history.back(-1);
+    });
+    $(document).on("click", ".renovate-btn", function(){
+        window.location.reload();
     });
 }
 
@@ -9,7 +12,7 @@ var race_id = null;
 $(function() {
     race_id = getSessionStorage(sessionStorageJsonKey[3]);
     initRoom();
-    bindedbackbtn();
+    bindBtn();
 });
 
 function timestampToDate(timestamp) {
