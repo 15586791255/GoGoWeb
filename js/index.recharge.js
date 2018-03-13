@@ -29,9 +29,9 @@ function sendRquest() {
                 if (arrlen > 0) {
                     for (var index in coin) {
                         html += '<div class="list">';
-                        html += "<input value='" + coin[index].coin_plan_id + "' type='hidden'></input>";
                         html += '<div class="border">';
                         html += '<div class="img-box">';
+                        html += "<input value='" + coin[index].coin_plan_id + "' type='hidden'></input>";
                         html += '<div class="img" style="background: url(&quot;' + coin[index].gift_icon + '&quot;) center center / cover no-repeat #495AFF;">';
                         html += '<div class="huiIN">';
                         html += '<div class="left">';
@@ -71,8 +71,9 @@ function selectamount() {
         $("div.btn").each(function() {
             $(this).removeClass("btn-select");
         })
-        $(this).find(".btn").addClass("btn-select");
-        var amoutnstr = $(this).text();
+        var select = $(this).find(".btn");
+        select.addClass("btn-select");
+        var amoutnstr = select.text();
         var amount = amoutnstr.substring(1, amoutnstr.length);
         var coin_plan_id = $(this).find("input[type=hidden]").val();
         initamount(amount, coin_plan_id);
