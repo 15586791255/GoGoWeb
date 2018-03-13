@@ -87,7 +87,7 @@ function initSwiperHotRaces() {
 
 function inithome() {
     var data = getSessionStorage("userInfo");
-    if (data == undefined || data == null || data == '' data == false) {
+    if (data == undefined || data == null || data == '' || data == false) {
         var html = document.getElementById("home-nologin").innerHTML;
         var nologin = document.getElementById("nologin").innerHTML;
         $("#Home").append(html);
