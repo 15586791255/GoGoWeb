@@ -53,85 +53,76 @@
     <link type="text/css" rel="stylesheet" href="css/login.css">
     <link type="text/css" rel="stylesheet" href="css/swiper.css">
     <link type="text/css" rel="stylesheet" href="css/Home.css">
-    <link type="text/css" rel="stylesheet" href="css/raceList.css">
     <link type="text/css" rel="stylesheet" href="css/window.css">
     <link type="text/css" rel="stylesheet" href="dropload/dropload.css">
     <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body style="margin:0;padding: 0;opacity: 1;">
     <div id="container" class="container pc">
-        <!--通用消息弹窗 开始-->
-        <div class="msg">
-            <div class="msg-bg"></div>
-            <div class="msg-info">
-                <h1><b>提示消息</b><i></i></h1>
-                <dl><dt></dt><dd></dd></dl>
-            </div>
-        </div>
 
-        <div class="window">
-
-            <!--弹窗半透明遮罩背景-->
-            <div class="window-bg"></div>
-
-            <!--支持弹窗 开始-->
-            <div class="window-support"><h1><b>支持 X</b><i></i></h1> <div><ul></ul></div></div>
-
-            <!--下注弹窗 开始-->
-            <div class="window-betpay window-all">
-                    <h1><b>竞猜投注</b><i></i></h1>
-                    <ul>
-                    <li><i class="title"> 最终获胜 KSV</i><i class="rate">赔率：1.72</i></li>
-                    <li>
-                        <input onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" class="gold" value="100" placeholder="投注金币">
-                        <i class="btn-join">投注</i>
-                    </li>
-                    <li>当前赔率按照各竞猜项投注而变动，结算赔率以封盘时为准！</li>
-                    <li><i>单次投注</i><i>10 ~ 100000</i></li>
-                    <li><i>我的金币</i><i class="my-gold">0</i></li>
-                </ul>
-            </div>
-        </div>
          <div id="Home">
          </div>
     </div>
     
     
-    <script type="text/html" id="home">
-            <div class="user-info">
-                <div>
-                    <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
-                        <div class="dot"></div>
-                    </div>
-                    <div onclick="bindedLoginShow();" class="user-name">
-                        <div class="name">[username]</div>
-                        <div class="gold">
-                            <div class="icon"></div>
-                            <div class="icon-count">[coin]</div>
-                        </div>
-                    </div>
-                      
-                    <div class="goHome-link">
-                        <a href="index.html">
-                            <div class="goHome"></div>
-                        </a>
-                    </div>
+    <script type="text/html" id="home-nologin">
+        <div class="user-info">
+            <div>
+                <div class="login-link">
+                    <a href="login.html">
+                         <div class="goLogin">点击登录</div>
+                    </a>
+                </div>
+                  
+                <div class="goHome-link">
+                    <div class="top-title">赛事</div>
+                </div>
 
-                    <div class="detail-link">
-                        <a href="shop.html">
-                            <div class="shop">
-                                <span class="shop-span"></span>
-                            </div>
-                        </a>
-                        <!-- <a href="shopCart.html">
-                            <div class="myCar">
-                                <div class="car-count">[carcount]</div>
-                            </div>
-                        </a> -->
+                <div class="detail-link">
+                    <a href="shop.html">
+                        <div class="shop">
+                            <span class="shop-span"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="mask" class="huiIN"></div>
+        </div>
+    </script>
+
+    <script type="text/html" id="home-logined">
+        <div class="user-info">
+            <div>
+                <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
+                    <div class="dot"></div>
+                </div>
+                <div onclick="bindedLoginShow();" class="user-name">
+                    <div class="name">[username]</div>
+                    <div class="gold">
+                        <div class="icon"></div>
+                        <div class="icon-count">[coin]</div>
                     </div>
                 </div>
-                <div id="mask" class="huiIN"></div>
+                  
+                <div class="goHome-link">
+                    <div class="top-title">赛事</div>
+                </div>
+
+                <div class="detail-link">
+                    <a href="shop.html">
+                        <div class="shop">
+                            <span class="shop-span"></span>
+                        </div>
+                    </a>
+                    <!-- <a href="shopCart.html">
+                        <div class="myCar">
+                            <div class="car-count">[carcount]</div>
+                        </div>
+                    </a> -->
+                </div>
             </div>
+            <div id="mask" class="huiIN"></div>
+        </div>
     </script>
 
     <script type="text/html" id="nologin">  
@@ -167,8 +158,21 @@
             <div class='login-ed'>
                 <div class='setBtn'></div>
                 <div class='quitBtn' onclick="signOut();"></div>
-                <div class='avatar' style="background: url('[avatar]') center center / cover no-repeat;"></div>
-                <div class='name'>[username]</div>
+                <div class='avatar' style="background: url('[avatar]') center center / cover no-repeat;">
+                    <span>
+                        <div class="name">[username]</div>
+                        <div class='g-coins'>
+                            竞猜币
+                        </div>
+                        <div class='myMoney'>
+                            <div class='gold'>
+                                <div class='icon'></div>
+                                <div class='count'>[coin]</div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <!-- <div class='name'>[username]</div>
                 <div class='myMoney'>
                     <div class='gold'>
                         <div class='icon'></div>
@@ -177,15 +181,23 @@
                             <div class='btn'>充值</div>
                         </a>
                     </div>
-                </div>
-                <!-- <div class='msg'>
-                    <div class='icon'></div>
-                    <div class='text'>地址信息</div>
                 </div> -->
+                <div class='change'>
+                    <a href='recharge.html'>
+                        <div class="href">
+                            <div class='icon'></div>
+                            <div class='text'>充值</div>
+                            <div class="go-btn"></div>
+                        </div>
+                    </a>
+                </div>
                 <div class='history'>
-                    <div class='icon'></div>
                     <a href='history.html'>
-                        <div class='text'>竞猜历史</div>
+                        <div class="href">
+                            <div class='icon'></div>
+                            <div class='text'>竞猜历史</div>
+                            <div class="go-btn"></div>
+                        </div>
                     </a>
                 </div>
                 <!-- <div class='change' >
@@ -196,72 +208,24 @@
             <div class='back' onclick='bindLoginHide();'></div>
         </div>
     </script>
-    
-    <script type="text/html" id="marquee">
-        <div class='marquee'>
-            <div class="swiper-container marquee">
-                
-            </div>
-        </div>
-    </script>
-
-    <script type="text/html" id="HomeNav">
-        <div class="HomeNav">
-            <div class="swiper-container swiper-container-horizontal">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper-slide-active">
-                        <div class="nav-btn active-nav">
-                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/f7b9985b34db0daf3dc7c74ff879d38f.png&quot;) 0% 0% / cover no-repeat;">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide-next">
-                        <div class="nav-btn">
-                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/f6d27aee9c5f909682a73a039c772054.png&quot;) 0% 0% / cover no-repeat;">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="nav-btn">
-                            <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/31ea4a4981b973447ebc777cd5f9718e.png&quot;) 0% 0% / cover no-repeat;">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide"><div class="nav-btn">
-                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/9d078e43860c25f196aa91591675073d.png&quot;) 0% 0% / cover no-repeat;"></div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="nav-btn">
-                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/1f7660c2a974058c14bcc3749326415e.png&quot;) 0% 0% / cover no-repeat;">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="nav-btn">
-                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/b9e2eac8740e99b7fbc919ef46340d5c.png&quot;) 0% 0% / cover no-repeat;">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="nav-btn">
-                        <div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/278409307d0fa8ae7b4b3648ddf78413.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/88a64e1f336a91fc9d02109196e11909.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/6c6b9d886eac1fd29747c03716575784.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/32327f7b070efb90b8c7918fa46e2ed9.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/741e9e747309b140ced33a9fc949bf93.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/d4499abad854e957712f90b84be1fdd9.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/eda09e3978a44c542bbfc2969eb3d128.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/b1af66d4753f36426f9d3d1badd6aa9a.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/a240a6005f2789da048223c1cf7c3606.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/660a9e0d171634ade768ee158580f862.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/bd6dbf56a2bab7effcbf9fb6ee524779.png&quot;) 0% 0% / cover no-repeat;"></div></div></div><div class="swiper-slide"><div class="nav-btn"><div class="game" style="background: url(&quot;http://oojkshyz1.bkt.clouddn.com/28c8c3b73b6db662b08292e758ed5821.png&quot;) 0% 0% / cover no-repeat;"></div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </script>
 
     <script type="text/html" id="HomeList">
+        <div class="HomeList-title">最近比赛</div>
         <div class="HomeList">
             <div class="lists">
             
+            </div>
+        </div> 
+    </script>
+
+    <script type="text/html" id="HotSwiper">
+        <div class="HotSwiper">
+            <div class="top-title">热门比赛</div>
+            <div class="bottom-content">
+                <div class="swiper-container hotRaces">
+                
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>  
     </script>
@@ -300,9 +264,6 @@
         <div id='title' class='title' >
             <div class='back-btn' onclick='window.history.go(-1);'></div>
                 <div class='title-name'>商城</div>
-                <!-- <div class='right-div'>
-                    <a href='index.html/#/home/exchangeRecord'>兑换记录</a>
-                </div> -->
             </div>
         </div>
     </script>
@@ -378,78 +339,7 @@
 </body>
 <script type="text/javascript" src="Swiper-4.1.0/js/swiper.min.js"></script>
 <script type="text/javascript" src="dropload/dropload.min.js"></script>
-<!-- <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/swiper.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script> -->
-<!-- <script type="text/javascript" src="js/route.js"></script> -->
-<!-- <script type="text/javascript" src="js/index.bottom.js"></script> -->
 <script type="text/javascript" src="js/index.common.js"></script>
 <script type="text/javascript" src="js/index.init.js"></script>
-<script type="text/javascript" src="js/index.user.js"></script>
-<script type="text/javascript">
-
-//msg弹窗打开关闭通用事件----------------------------------------------------------------
-//打开
-function msg_show(auto,info,bnt,callback){
-  $(".msg").fadeTo(200,1);
-  if(callback!=null){
-      callback($(".msg .msg-info dd"));
-  }
-  $(".msg .msg-info dt").text(info);
-  if(bnt!=null){
-      $(".msg .msg-info dd").text(bnt).show();
-      
-  }
-  if(auto==true){
-      setTimeout(function(){
-          $(".msg").fadeOut(200,function(){
-              $(".msg .msg-info dt").empty();
-          });
-      },1200);
-  }
-}
-//关闭
-$(".msg .msg-bg,.msg h1 i").click(function(){
-  $(".msg").fadeOut(200,function(){
-      $(".msg .msg-info dt,.msg .msg-info dd").empty();
-      $(".msg .msg-info dd").hide();
-      $(".menu_bar").hide();
-  });
-});
-
-//关闭
-$(".buy .buy-bg,.buy h1 i").unbind().click(function(){
-    $(".buy").fadeOut(200,function(){
-    });
-});
-
-//window弹窗打开关闭通用事件----------------------------------------------------------------
-//打开
-function window_show(name,id,callback){
-    $(".window-"+name).show();
-    $(".window-bg").show();
-    $(".window").fadeTo(200,1);
-    if(callback!=null){
-        callback();
-    }
-    
-    //id 为商城的标签id，非商城弹窗勿用
-    if(id!=null){
-        $(".window-"+name+"-menu").children().removeClass();
-        $(".window-"+name+"-menu").children().eq(id).addClass("window-"+name+"-menu-click");
-        $(".window-"+name+"-list").children().hide();
-        $(".window-"+name+"-list").children().eq(id).show();
-    }
-}
-//关闭
-$(".window-bg,.window h1 i").click(function(){
-    $(".window").fadeOut(200,function(){
-        $(".window").children().hide();
-        $(".window h2").parent().hide();
-        $(".window iframe").attr("src","iframeload.html");
-    });
-});
-
-</script>
 
 </html>

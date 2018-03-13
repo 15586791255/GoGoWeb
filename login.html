@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>GOGO电竞</title>
-    <base href="http://localhost:8080/">
+    <base href="https://gogo.scrats.cn/">
     <meta charset="utf-8">
     <meta http-equiv="Expires" CONTENT="0">
     <meta http-equiv="Cache-Control" CONTENT="no-cache">
@@ -43,58 +44,35 @@
             }
         })();
     </script>
-    <link type="text/css" rel="stylesheet" href="css/index.css">
-    <link type="text/css" rel="stylesheet" href="css/title.css">
-    <link type="text/css" rel="stylesheet" href="css/downALert.css">
-    <link type="text/css" rel="stylesheet" href="css/guild.css">
-    <link type="text/css" rel="stylesheet" href="css/Home.css">
-    <link type="text/css" rel="stylesheet" href="css/loading.css">
-    <link type="text/css" rel="stylesheet" href="css/login.css">
-    <link type="text/css" rel="stylesheet" href="css/swiper.css">
-    <link type="text/css" rel="stylesheet" href="css/pay.css">
+    <link type="text/css" rel="stylesheet" href="css/loginInfo.css">
     <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body style="margin:0;padding: 0;opacity: 1;">
     <div id="container" class="container pc">
          <div id="Home">
-         </div>
-    </div>
+            <div class="login-info">
+                <div class="logo">
+                    <img src="images/etc_logo_200.png">
+                </div>
+                <div class="phone-input">
+                    <input id="phone-input" type="number" class="input" oninput="if(value.length>11)value=value.slice(0,11)" value="" placeholder="手机号">
+                     <span class="get-code" onclick="getCode();">获取验证码</span>
+                </div>
 
-    <script type="text/html" id="pay">
-        <div id='title' class='title'>
-            <div class='back-btn'></div>
-            <div class="home-link">
-                <a href="index.html">
-                     <div class="home-btn"></div>
-                </a>
-            </div>
-            <div class='title-name'>充值</div>
-        </div>
-        <div class="pay-box">
-            <div class="need-pay">
-                <div class="phone">支付金额</div>
-                <div class="name">[amount].00元</div>
-            </div>
-            <div class="pay-way">
-                <div class="choose">请选择支付方式</div>
-                <div>
-                    <div class="list">
-                        <div class="icon zfb-pay"></div>
-                        <div class="name">支付宝</div>
-                        <div class="select-div select"></div>
-                    </div><div class="list">
-                        <div class="icon wx-pay"></div>
-                        <div class="name">微信支付</div>
-                        <div class="select-div "></div>
+                <div class="code">
+                    <input id="code" type="number" value="" placeholder="验证码">
+                </div>
+                <div class="login-btn" onclick="login();">登录</div>
+                <div class='login-other'>
+                    <div class='division'></div>
+                    <div class='btn'>
+                        <div class='btn-wx'></div>
                     </div>
                 </div>
             </div>
-            <div id="payBox">
-                
-            </div>
-        </div>
-    </script>
-
+         </div>
+    </div>
+    
     <div id="am-modal-container" style="display: none;">
         <div>
             <div class="am-modal-mask"></div>
@@ -102,10 +80,10 @@
                 <div role="document" class="am-modal am-modal-transparent">
                     <div class="am-modal-content">
                         <div class="am-modal-header">
-                            <div class="am-modal-title">体验完整功能</div>
+                            <div class="am-modal-title"></div>
                         </div>
                         <div class="am-modal-body">
-                            <div class="am-modal-alert-content">请下载 GOGO电竞 APP</div>
+                            <div class="am-modal-alert-content"></div>
                         </div>
                         <div class="am-modal-footer">
                             <div class="am-modal-button-group-h am-modal-button-group-normal" role="group">
@@ -118,9 +96,7 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="js/index.common.js"></script>
-    <script type="text/javascript" src="js/index.pay.js"></script>
-    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </body>
+<script type="text/javascript" src="js/index.common.js"></script>
+<script type="text/javascript" src="js/index.loginInfo.js"></script>
 </html>

@@ -1,6 +1,6 @@
 .ShopList
 {
-    padding-top: .26667rem;
+    background: #252845;
 }.ShopList:after
 {
     display: block;
@@ -11,13 +11,14 @@
 {
     width: 100%;
 
-    background: #fff;
+    background: #1F2038;
 }.ShopList .listNav .nav
 {
     width: 95%;
-    height: .8rem;
-    margin: .26667rem auto;
+    height: .9rem;
+    margin: .01667rem auto;
     margin-bottom: .53333rem;
+    font-size: 0.38333rem;
 }.ShopList .listNav .nav-btn
 {
     line-height: .8rem;
@@ -25,33 +26,17 @@
     float: left;
 
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;;
+            box-sizing: border-box;
     width: 20%;
 
     text-align: center;
 
-    color: #ff0059;
-    border: 1px solid #ff0059;
-    background: #fff;
-}.ShopList .listNav .nav-btn:first-child
+    color: #4B5B91;
+    background: #1F2038;
+}.ShopList .listNav .nav-btn-select
 {
-    border-radius: 5px 0 0 5px;
-}/*.ShopList .listNav .nav-btn:nth-child(3)
-{
-    border-radius: 0 5px 5px 0;
-}.ShopList .listNav .nav-btn:nth-child(4)
-{
-    border-radius: 0 5px 5px 0;
-}*/.ShopList .listNav .nav-btn:nth-child(5)
-{
-    border-radius: 0 5px 5px 0;
-}/*.ShopList .listNav .nav-btn:nth-child(2)
-{
-    width: 34%;
-}*/.ShopList .listNav .nav-btn-select
-{
-    color: #fff;;
-    background: #ff0059;
+    color: #495AFF;
+    border-bottom: 3px solid #495AFF;
 }.ShopList .listNav-top
 {
     position: fixed;
@@ -72,41 +57,51 @@
 }.ShopList .list .border .img-box
 {
     padding: 1px;
-
-    background: red;
-    background: -webkit-gradient(linear,left top,left bottom,from(#05fce8),to(#4a0bab));
-    background: linear-gradient(#05fce8,#4a0bab);
+    position: relative;
 }.ShopList .list .border .img-box .img
 {
     width: 4.34667rem;
-    height: 2.66667rem;
+    height: 4.34667rem;
+}.ShopList .list .border .img-box .img .huiIN{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    z-index: 99;
+    background: rgba(0,0,0,.8);
+    bottom: 0px;
+    width: 100%;
 }.ShopList .list .border .name
 {
     font-size: .37333rem;
     line-height: .42667rem;
-
     overflow: hidden;
-
-    width: 100%;
-    height: .4rem;
-    margin-top: .26667rem;;
-
-    text-align: center;
-
-    color: #3c0f40;
+    height: .42667rem;
+    margin-top: .16667rem;
+    margin-left: .16667rem;
+    color: #fff;
+    text-align: left;
 }.ShopList .list .border .money
 {
-    font-size: .37333rem;
-
-    height: .8rem;
-    margin-top: .13333rem;;
-
-    color: #ff0059;
+    font-size: .27333rem;
+    height: .42667rem;
+    line-height: .42667rem;
+    padding-left: .16667rem;
+    padding-bottom: .16667rem;
+    float: left;
+    color: #FFAB13;
 }.ShopList .list .border .money span
 {
     font-size: .34667rem;
 
     vertical-align: top;
+}.ShopList .list .border .count{
+    font-size: .27333rem;
+    height: .42667rem;
+    line-height: .42667rem;
+    padding-right: .16667rem;
+    padding-bottom: .16667rem;
+    float: right;
+    color: #acafad
 }.ShopList .list .border .btn
 {
     line-height: .53333rem;

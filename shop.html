@@ -63,38 +63,38 @@
     </div>
 
     <script type="text/html" id="home">
-            <div class="user-info">
-                <div>
-                    <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
-                        <div class="dot"></div>
-                    </div>
-                    <div onclick="bindedLoginShow();" class="user-name">
-                        <div class="name">[username]</div>
-                        <div class="gold">
-                            <div class="icon"></div>
-                            <div class="icon-count">[coin]</div>
-                        </div>
-                    </div>
-                    <div class="goHome-link">
-                        <a href="index.html">
-                            <div class="goHome"></div>
-                        </a>
-                    </div>
-                    <div class="detail-link">
-                        <a href="shop.html">
-                            <div class="shop">
-                                <span class="shop-span"></span>
-                            </div>
-                        </a>
-                        <!-- <a href="shopCart.html">
-                            <div class="myCar">
-                                <div class="car-count">[carcount]</div>
-                            </div>
-                        </a> -->
+        <div class="user-info">
+            <div>
+                <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
+                    <div class="dot"></div>
+                </div>
+                <div onclick="bindedLoginShow();" class="user-name">
+                    <div class="name">[username]</div>
+                    <div class="gold">
+                        <div class="icon"></div>
+                        <div class="icon-count">[coin]</div>
                     </div>
                 </div>
-                <div id="mask" class="huiIN"></div>
+                <div class="goHome-link">
+                    <a href="index.html">
+                        <div class="goHome"></div>
+                    </a>
+                </div>
+                <div class="detail-link">
+                    <a href="shop.html">
+                        <div class="shop">
+                            <span class="shop-span"></span>
+                        </div>
+                    </a>
+                    <!-- <a href="shopCart.html">
+                        <div class="myCar">
+                            <div class="car-count">[carcount]</div>
+                        </div>
+                    </a> -->
+                </div>
             </div>
+            <div id="mask" class="huiIN"></div>
+        </div>
     </script>
 
     <script type="text/html" id="nologin">  
@@ -163,6 +163,11 @@
     <script type="text/html" id="shop">
         <div id="title" class="title">
             <div class="back-btn"></div>
+            <div class="home-link">
+                <a href="index.html">
+                     <div class="home-btn"></div>
+                </a>
+            </div>
             <div class="title-name">商城</div>
             <!-- <div class="right-div">
                 <a href="/exchangeRecord.html">兑换记录</a>
@@ -209,8 +214,6 @@
     </div>
 
     <script type="text/javascript" src="js/index.common.js"></script>
-    <script type="text/javascript" src="js/index.shop.js"></script>
-    <script type="text/javascript" src="js/index.user.js"></script>
-    
+    <script type="text/javascript" src="js/index.shop.js"></script>   
 </body>
 </html>

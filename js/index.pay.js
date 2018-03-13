@@ -27,25 +27,8 @@ $(function() {
 });
 
 function initpay() {
-    var data = getSessionStorage("userInfo");
-    var html = document.getElementById("home").innerHTML;
     var pay = document.getElementById("pay").innerHTML;
 
-    var data = getSessionStorage("userInfo");
-    if (data == undefined || data == null || data == '') {
-        var html = document.getElementById("home").innerHTML;
-        var source = html.replace(reg, function (node, key) { return { 
-            'username': '点击登录',
-            'coin': '',
-            'carcount': '0',
-            'avatar': testUrl + 'images/user/def.png'
-          }[key]; });
-        var nologin = document.getElementById("nologin").innerHTML;
-        $("#Home").append(source);
-        $(".user-info").append(nologin);
-    } else {
-        initlogined(data);
-    }
     var sourcepay = pay.replace(reg, function (node, key) { return { 
             'amount': Request['pay'],
             'coin_plan_id' : Request['coin_plan_id']
@@ -85,17 +68,6 @@ function selectpaymentchannel() {
     });
 }
 
-function bindedLoginShow() {
-    $(".login-page").addClass("login-page-show");
-    $(".login-page").css("transform", "translateX(0)");
-    $("#mask").addClass("huiIN-show");
-}
-
-function bindLoginHide() {
-    $(".login-page").removeClass("login-page-show");
-    $(".login-page").css("transform", "translateX(-100%)");
-    $("#mask").removeClass("huiIN-show");
-}
 
 // 请求支付宝支付
 function requestAlipay() {

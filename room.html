@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOGO电竞</title>
+    <base href="https://gogo.scrats.cn/">
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="keywords" content="GOGO电竞,竞猜,大亨,游戏,LOL,守望先锋,王者荣耀,CSGO,星际争霸2,dota2,LPL,KPL,S系列赛,TI,电竞直播,饰品交易,竞币,游戏数据查询,竞猜商城,电竞菠菜,电竞竞猜,赛事互动,赛事平台,"/>
+    <meta name="description" content="GOGO电竞，竞猜成就大亨。一站式享受实名专家及电竞红人的专业分析，赛事、战队、选手数据一应俱全，让你实时掌握赛事一手，观赛、竞猜更轻松！"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="shortcut icon" href="images/etc_logo_200.png">
+
+    <script>
+        /*if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }*/
+
+        (function () {
+            var d = window, a = document.documentElement, e;
+            c();
+            a.setAttribute("data-dpr", d.devicePixelRatio);
+            d.addEventListener("resize", b, false);
+            d.addEventListener("pageshow", function (f) {
+                f.persisted && b()
+            }, false);
+            function b() {
+                clearTimeout(e);
+                e = setTimeout(c, 300)
+            }
+            function c() {
+                var f = a.getBoundingClientRect().width;
+                if (f <= 750) {
+                    d.rem = a.getBoundingClientRect().width / 10
+                } else {
+                    d.rem = 75;
+                }
+                a.style.fontSize = d.rem + "px";
+            }
+        })();
+    </script>
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/title.css">
+    <link type="text/css" rel="stylesheet" href="css/room.css">
+    <link type="text/css" rel="stylesheet" href="css/window.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body style="margin:0;padding: 0;opacity: 1;">
+    <div id="container" class="container pc">
+         <div id="Home">
+         </div>
+    </div>
+
+    <script type="text/html" id="room">
+        <div class="room-top">
+            <div id="title" class="room-title">
+                <div class="back-btn"></div>
+                <div class="home-link">
+                    <a href="index.html">
+                         <div class="home-btn"></div>
+                    </a>
+                </div>
+                <div class="title-name" style="background: none;">[title_name]</div>
+                <div class="renovate-btn"></div>
+            </div>
+            <div class="time">[time]</div>
+            <div class="detail">
+                <div class="left">
+                    <img src="[team_a_logo]" alt="">
+                    <div class="team-name">[team_a_name]</div>
+                </div>
+                <div class="center">
+                    <div class="VS">VS</div>
+                    <div class="score">[score]</div>
+                </div>
+                <div class="right">
+                    <img src="[team_b_logo]" alt="">
+                    <div class="team-name">[team_b_name]</div>
+                </div>
+                <div class="vote">
+                    <div class="vote-left">
+                        <div class="left-bg">
+                            <span class="icon"></span>
+                            <div class="rate" data-teamId="[team_b_id]" data-raceId="[race_id]" data-teamName="[team_b_name]">[team_a_rate]</div>
+                        </div>
+                    </div>
+                    <div class="vote-right">
+                        <div class="right-bg">
+                            <span class="icon"></span>
+                            <div class="rate" data-teamId="[team_b_id]" data-raceId="[race_id]" data-teamName="[team_b_name]">[team_b_rate]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="room_bet_list">
+            <ul id="ul"></ul>
+        </div>
+        <div class="room-content">
+            <div class="detail-list">
+                <div class="room">
+                    <div id="ul-lists"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <div id="am-modal-container" style="display: none;">
+        <div>
+            <div class="am-modal-mask"></div>
+            <div class="am-modal-wrap " role="dialog" aria-labelledby="体验完整功能">
+                <div role="document" class="am-modal am-modal-transparent">
+                    <div class="am-modal-content">
+                        <div class="am-modal-header">
+                            <div class="am-modal-title">体验完整功能</div>
+                        </div>
+                        <div class="am-modal-body">
+                            <div class="am-modal-alert-content">请下载 GOGO电竞 APP</div>
+                        </div>
+                        <div class="am-modal-footer">
+                            <div class="am-modal-button-group-h am-modal-button-group-normal" role="group">
+                                <a class="am-modal-button" role="button" onclick="$('#am-modal-container').hide();">取消</a>
+                                <a class="am-modal-button" role="button" onclick="downLoadApp();">Ok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--通用消息弹窗 开始-->
+    <div class="msg">
+        <div class="msg-bg"></div>
+        <div class="msg-info">
+            <h1><b>提示消息</b><i></i></h1>
+            <dl><dt></dt><dd></dd></dl>
+        </div>
+    </div>
+
+    <div class="window">
+
+        <!--弹窗半透明遮罩背景-->
+        <div class="window-bg"></div>
+
+        <!--支持弹窗 开始-->
+        <div class="window-support">
+            <h1><b>支持 X</b><i></i></h1>
+            <div class="window-content">
+            </div>
+        </div>
+
+
+        <!--下注弹窗 开始-->
+        <div class="window-betpay window-all">
+                <h1><b>竞猜投注</b><i></i></h1>
+                <ul>
+                <li><i class="title"> 最终获胜 KSV</i><i class="rate">赔率：1.72</i></li>
+                <li>
+                    <input onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" class="gold" value="100" placeholder="投注金币">
+                    <i class="btn-join">投注</i>
+                </li>
+                <li>当前赔率按照各竞猜项投注而变动，结算赔率以封盘时为准！</li>
+                <li><i>单次投注</i><i>10 ~ 100000</i></li>
+                <li><i>我的金币</i><i class="my-gold">0</i></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/index.common.js"></script>
+<script type="text/javascript" src="js/index.room.js"></script>
+<script type="text/javascript">
+
+//msg弹窗打开关闭通用事件----------------------------------------------------------------
+//打开
+function msg_show(auto,info,bnt,callback){
+  $(".msg").fadeTo(200,1);
+  if(callback!=null){
+      callback($(".msg .msg-info dd"));
+  }
+  $(".msg .msg-info dt").text(info);
+  if(bnt!=null){
+      $(".msg .msg-info dd").text(bnt).show();
+      
+  }
+  if(auto==true){
+      setTimeout(function(){
+          $(".msg").fadeOut(200,function(){
+              $(".msg .msg-info dt").empty();
+          });
+      },1200);
+  }
+}
+//关闭
+$(".msg .msg-bg,.msg h1 i").click(function(){
+  $(".msg").fadeOut(200,function(){
+      $(".msg .msg-info dt,.msg .msg-info dd").empty();
+      $(".msg .msg-info dd").hide();
+      $(".menu_bar").hide();
+  });
+});
+
+//关闭
+$(".buy .buy-bg,.buy h1 i").unbind().click(function(){
+    $(".buy").fadeOut(200,function(){
+    });
+});
+
+//window弹窗打开关闭通用事件----------------------------------------------------------------
+//打开
+function window_show(name,id,callback){
+    $(".window-"+name).show();
+    $(".window-bg").show();
+    $(".window").fadeTo(200,1);
+    if(callback!=null){
+        callback();
+    }
+    
+    //id 为商城的标签id，非商城弹窗勿用
+    if(id!=null){
+        $(".window-"+name+"-menu").children().removeClass();
+        $(".window-"+name+"-menu").children().eq(id).addClass("window-"+name+"-menu-click");
+        $(".window-"+name+"-list").children().hide();
+        $(".window-"+name+"-list").children().eq(id).show();
+    }
+}
+//关闭
+$(".window-bg,.window h1 i").click(function(){
+    $(".window").fadeOut(200,function(){
+        $(".window").children().hide();
+        $(".window h2").parent().hide();
+    });
+});
+
+</script>
+
+</html>

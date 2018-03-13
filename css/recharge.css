@@ -1,6 +1,7 @@
 .recharge
 {
     font-size: .32rem;
+    background: #252845;
 }.recharge .user
 {
     position: relative;
@@ -111,16 +112,14 @@
 }.recharge .pay
 {
     line-height: 1.33333rem;
-
+    background: #1F2038;
     position: fixed;
     bottom: 0;
     left: 0;
-
+    color: #fff;
     width: 100%;
     height: 1.33333rem;
     padding-left: .26667rem;
-
-    background: #fff;
 }.recharge .pay span
 {
     color: #ff0059;
@@ -140,7 +139,7 @@
     text-align: center;
 
     color: #fff;
-    background: #ff0059;
+    background-image: linear-gradient(-225deg, #495AFF 0%, #F43B47 100%);
 }.downLink
 {
     line-height: 2rem;
@@ -148,4 +147,83 @@
     text-align: center;
 
     color: #ff0059;
+}.RechargeList{
+    background: #252845;
+}.RechargeList .listNav{
+    width: 100%;
+    background: #252845;
+}.RechargeList .listNav .nav {
+    width: 95%;
+    height: .2rem;
+    margin: .01667rem auto;
+    margin-bottom: .53333rem;
+    font-size: 0.38333rem;
+}.RechargeList .list
+{
+    float: left;
+
+    width: 50%;
+    padding-bottom: .26667rem;
+}.RechargeList .list .border
+{
+    width: 4.4rem;
+    margin: 0 auto;
+
+    text-align: center;
+}.RechargeList .list .border .img-box
+{
+    padding: 1px;
+    position: relative;
+}.RechargeList .list .border .img-box .img
+{
+    width: 4.34667rem;
+    height: 4.34667rem;
+}.RechargeList .list .border .img-box .img .huiIN{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    bottom: 0px;
+    width: 3.81333rem;
+    height: 0.98668rem;
+    padding: .26667rem;
+}.RechargeList .list .border .left .name
+{
+    font-size: .37333rem;
+    line-height: .42667rem;
+    overflow: hidden;
+    height: .42667rem;
+    color: #fff;
+    text-align: left;
+    width: 2rem;
+    position: absolute;
+}.RechargeList .list .border .left .money
+{
+    font-size: .27333rem;
+    height: .42667rem;
+    line-height: .42667rem;
+    float: left;
+    color: #FFAB13;
+    bottom: .26667rem;
+    position: absolute;
+}.RechargeList .list .border .left .money span
+{
+    font-size: .34667rem;
+
+    vertical-align: top;
+}.RechargeList .list .border .left{
+    float: left;
+    width: 50%;
+    height: 100%;
+}.RechargeList .list .border .right .btn{
+    line-height: 0.98668rem;
+    float: right;
+    width: 100%;
+    height: 0.98668rem;
+    text-align: center;
+    color: #ff0059;
+    border-radius: .10667rem;
+    background-image: linear-gradient(-225deg, #495AFF 0%, #F43B47 100%);
+}.btn-select {
+    border: 1px solid #ff0059;
 }

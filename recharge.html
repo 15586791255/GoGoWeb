@@ -60,123 +60,35 @@
          </div>
     </div>
 
-    <script type="text/html" id="home">
-        <div class="user-info">
-            <div>
-                <div onclick="bindedLoginShow();" class="user-img" style="background: url('[avatar]') center center / cover no-repeat;">
-                    <div class="dot"></div>
-                </div>
-                <div onclick="bindedLoginShow();" class="user-name">
-                    <div class="name">[username]</div>
-                    <div class="gold">
-                        <div class="icon"></div>
-                        <div class="icon-count">[coin]</div>
-                    </div>
-                </div>
-                <div class="goHome-link">
-                    <a href="index.html">
-                        <div class="goHome"></div>
-                    </a>
-                </div>
-                <div class="detail-link">
-                    <a href="shop.html">
-                        <div class="shop">
-                            <span class="shop-span"></span>
-                        </div>
-                    </a>
-                    <!-- <a href="shopCart.html">
-                            <div class="myCar">
-                                <div class="car-count">[carcount]</div>
-                            </div>
-                        </a> -->
-                </div>
-            </div>
-            <div id="mask" class="huiIN"></div>
-        </div>
-    </script>
-
     <script type="text/html" id="recharge">
         <div id='title' class='title'>
             <div class='back-btn'></div>
+            <div class="home-link">
+                <a href="index.html">
+                     <div class="home-btn"></div>
+                </a>
+            </div>
             <div class='title-name'>充值</div>
         </div>
-        <div class='recharge'>
-            <div class='myMoney'>
-                <div>余额:</div>
-                <div class='zs'>
-                    <div class='icon'></div>[coin]</div>
+
+        
+        <div class="RechargeList">
+            <div class="listNav">
+                <div class="nav">
+                </div>
+            </div> 
+            <div class="HomeList" style="position: relative; overflow: auto;">
+                
             </div>
-            
-            <div class='downLink'>下载GOGO电竞，获取更多钻石！&gt;&gt;</div>
+        </div>
+
+        <div class='recharge'>         
             <div class='pay'>需支付 
                 <span>￥[payment]元</span>
-                <a href='pay.html?coin_plan_id=[coin_plan_id]&pay=[payment]'>
+                <a href='/pay.html?coin_plan_id=[coin_plan_id]&pay=[payment]'>
                     <div class='btn'>立即支付</div>
                 </a>
             </div>
-        </div>
-    </script>
-
-    <script type="text/html" id="logined">
-        <div id='login-page' class='login-page' style='transform: translateX(-100%); position: fixed;'>
-            <div class='login-ed'>
-                <div class='setBtn'></div>
-                <div class='quitBtn' onclick="signOut();"></div>
-                <div class='avatar' style="background: url('[avatar]') center center / cover no-repeat;"></div>
-                <div class='name'>[username]</div>
-                <div class='myMoney'>
-                    <div class='gold'>
-                        <div class='icon'></div>
-                        <div class='count'>[coin]</div>
-                        <a href='recharge.html'>
-                            <div class='btn'>充值</div>
-                        </a>
-                    </div>
-                </div>
-                <!-- <div class='msg'>
-                    <div class='icon'></div>
-                    <div class='text'>地址信息</div>
-                </div> -->
-                <div class='history'>
-                    <div class='icon'></div>
-                    <a href='history.html'>
-                        <div class='text'>竞猜历史</div>
-                    </a>
-                </div>
-                <!-- <div class='change' >
-                    <div class='icon'></div>
-                    <div class='text'>兑换记录</div>
-                </div> -->
-            </div>
-            <div class='back' onclick='bindLoginHide();'></div>
-        </div>
-    </script>
-
-    <script type="text/html" id="nologin">  
-        <div id='login-page' class='login-page' style='transform: translateX(-100%); position: fixed;'>
-            <div class='no-login'>
-                <div class='phone-input'>
-                    <input id='phone-input' type='number' class='input' oninput='if(value.length>11)value=value.slice(0,11)'  value='' placeholder='请输入手机号'>
-                </div>
-                <div class='code'>
-                    <input id='code' type='number' value='' placeholder='请输入验证码'>
-                    <div class='code-btn' onclick='getCode();'>获取验证码</div>
-                </div>
-                <div class='error-msg'></div>
-                <div class='login-btn' onclick='login();'>登录</div>
-                <div class='login-other' style="display: none;">
-                    <div class='division'></div>
-                    <div class='btn'>
-                        <div class='btn-wx isNotWx'></div>
-                    </div>
-                </div>
-                <div class='downLink'></div>
-                <div class='download'>
-                    <div class='btn' onclick='downLoadApp();'>下载GOGO电竞APP，拿千元红包</div>
-                    <img src='images/user/qrcode-gzh.png' alt=''>
-                </div>
-            </div>
-            <div class='back' onclick='bindLoginHide();'></div>
         </div>
     </script>
 
@@ -205,7 +117,6 @@
     </div>
 
     <script type="text/javascript" src="js/index.common.js"></script>
-    <script type="text/javascript" src="js/index.user.js"></script>
     <script type="text/javascript" src="js/index.recharge.js"></script>
 </body>
 </html>

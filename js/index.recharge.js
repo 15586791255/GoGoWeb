@@ -6,6 +6,7 @@ function bindedbackbtn() {
 
 $(function() {
     sendRquest();
+    bindedbackbtn();
 });
 
 function sendRquest() {
@@ -21,9 +22,39 @@ function sendRquest() {
             if (data.code == 200) {
                 var coin = data.data;
                 initrecharge(coin);
-                initcoin(coin);
-                bindedbackbtn();
-                selectamount();
+                var height = $(window).height() - $("#title").outerHeight(true);
+                height = height + "px";
+                $(".HomeList").css("height", height);
+                var html = '';
+                var arrlen = coin.length;
+                if (arrlen > 0) {
+                    for (var index in coin) {
+                        html += '<div class="list">';
+                        html += "<input value='" + coin[index].coin_plan_id + "' type='hidden'></input>";
+                        html += '<div class="border">';
+                        html += '<div class="img-box">';
+                        html += '<div class="img" style="background: url(&quot;' + coin[index].gift_icon + '&quot;) center center / cover no-repeat #495AFF;">';
+                        html += '<div class="huiIN">';
+                        html += '<div class="left">';
+                        html += '<div class="name">' + coin[index].gift_name + 'x' + coin[index].gift_count + '</div>';
+                        html += '<div class="money">' + coin[index].coin_count + '<span>竞猜币</span></div>';
+                        html += '</div>';
+                        html += '<div class="right">';
+                        if (index > 0) {
+                            html += '<div class="btn">￥' + coin[index].fee / 100 + '</div>';
+                        } else {
+                            html += '<div class="btn btn-select">￥' + coin[index].fee / 100 + '</div>';
+                        }
+                        html += '</div>';
+                        html += '</div>';
+                        html += '</div>';
+                        html += '</div>';
+                        html += '</div>';
+                        html += '</div>';
+                    }
+                    $(".HomeList").html(html);
+                    selectamount();
+                } 
             } else {
                 Toast("参数异常", 1000);
             }
@@ -35,73 +66,27 @@ function sendRquest() {
     });
 }
 
-function initrecharge(_coin) {
-    var userInfo = getSessionStorage("userInfo");
-    var html = document.getElementById("home").innerHTML;
-    var recharge = document.getElementById("recharge").innerHTML;;
-    if (userInfo == undefined || userInfo == null || userInfo == '') {
-        var source = html.replace(reg, function (node, key) { return { 
-            'username': '点击登录',
-            'coin': '',
-            'carcount': '0',
-            'avatar': testUrl + 'images/user/def.png'
-          }[key]; });
-        var nologin = document.getElementById("nologin").innerHTML;
-        $("#Home").append(source);
-        $(".user-info").append(nologin);
-        sourcerecharge = recharge.replace(reg, function (node, key) { return { 
-            'coin': '0',
-            'payment': _coin[0].fee / 100,
-            'coin_plan_id': _coin[0].coin_plan_id
-          }[key]; });
-    } else {
-        initlogined(userInfo);
-        sourcerecharge = recharge.replace(reg, function (node, key) { return { 
-            'coin': userInfo.coin,
-            'payment': _coin[0].fee / 100,
-            'coin_plan_id': _coin[0].coin_plan_id
-          }[key]; });
-
-    }
-    $("#Home").append(sourcerecharge);
-}
-
-function initcoin(_data) {
-    var html = "<div>";
-    if (_data != null && _data != undefined && _data.length > 0) {
-        for (index in _data) {
-            html += "<div class='recharge-list'>";
-            html += "<div class='gold'>";
-            html += "<div class='icon'></div>x";
-            html += _data[index].coin_count;
-            html += " <span class='send'></span>";
-            html += "</div>";
-            if (index == 0) {
-                html += "<div class='btn btn-select'>";
-            } else {
-                html += "<div class='btn'>";
-            }
-            html += "<input value='" + _data[index].coin_plan_id + "' type='hidden'></input>";
-            html += _data[index].fee / 100;
-            html += "元</div>";
-            html += "</div>";
-        }
-    }
-    html += "</div>";
-    $("div.recharge").find(".myMoney").after(html);
-}
 
 function selectamount() {
-    $("div.recharge-list").find(".btn").click(function(){
+    $("div.HomeList").find(".btn").click(function(){
         $("div.btn").each(function() {
             $(this).removeClass("btn-select");
         })
         $(this).addClass("btn-select");
         var amoutnstr = $(this).text();
-        var amount = amoutnstr.substring(0, amoutnstr.length - 1);
+        var amount = amoutnstr.substring(1, amoutnstr.length);
         var coin_plan_id = $(this).find("input[type=hidden]").val();
         initamount(amount, coin_plan_id);
     });
+}
+
+function initrecharge(_coin) {
+    var recharge = document.getElementById("recharge").innerHTML;;
+    sourcerecharge = recharge.replace(reg, function (node, key) { return { 
+        'payment': _coin[0].fee / 100,
+        'coin_plan_id': _coin[0].coin_plan_id
+      }[key]; });
+    $("#Home").append(sourcerecharge);
 }
 
 function initamount(_amount, _coin_plan_id) {
@@ -114,16 +99,4 @@ function initamount(_amount, _coin_plan_id) {
     ";
     $(".pay").empty();
     $(".pay").append(pay);
-}
-
-function bindedLoginShow() {
-    $(".login-page").addClass("login-page-show");
-    $(".login-page").css("transform", "translateX(0)");
-    $("#mask").addClass("huiIN-show");
-}
-
-function bindLoginHide() {
-    $(".login-page").removeClass("login-page-show");
-    $(".login-page").css("transform", "translateX(-100%)");
-    $("#mask").removeClass("huiIN-show");
 }

@@ -21,21 +21,6 @@ function inithome() {
     var logined = '';
     var shop = document.getElementById("shop").innerHTML;
 
-    if (data == undefined || data == null || data == '') {
-        var html = document.getElementById("home").innerHTML;
-        var source = html.replace(reg, function (node, key) { return { 
-            'username': '点击登录',
-            'coin': '',
-            'carcount': '0',
-            'avatar': testUrl + 'images/user/def.png'
-          }[key]; });
-        var nologin = document.getElementById("nologin").innerHTML;
-        $("#Home").append(source);
-        $(".user-info").append(nologin);
-    } else {
-        initlogined(data);
-    }
-
     $("#Home").append(shop);
     var height = $(window).height() - $(".user-info").outerHeight(true) - $("#title").outerHeight(true) - $(".ShopList").outerHeight(true);
     height = height + "px";
@@ -91,10 +76,13 @@ function initNavList(_id) {
                         html += '<div class="border">';
                         html += '<div class="img-box">';
                         html += '<div class="img" style="background: url(&quot;' + data.items[index].cover + '&quot;) center center / cover no-repeat rgb(255, 255, 255);">';
-                        html += '</div>';
-                        html += '</div>';
+                        html += '<div class="huiIN">';
                         html += '<div class="name">' + data.items[index].title + '</div>';
-                        html += '<div class="money">' + data.items[index].coin + '<span>竞币</span>';
+                        html += '<div class="money">' + data.items[index].coin + '<span>竞猜币</span>';
+                        html += '</div>';
+                        html += '<div class="count">剩余' + data.items[index].total + '<span>件</span></div>';
+                        html += '</div>';
+                        html += '</div>';
                         html += '</div>';
                         html += '</div>';
                         html += '</div>';

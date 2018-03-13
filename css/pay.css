@@ -6,10 +6,10 @@
 }.pay-box .need-pay
 {
     position: relative;
-
     height: 1.44rem;
-
-    background: #fff;
+    background: #252845;
+    color: #fff;
+    border-bottom: 1px solid #4B5B91;
 }.pay-box .need-pay .phone
 {
     line-height: 1.44rem;;
@@ -24,7 +24,8 @@
     right: .26667rem;
 }.pay-box .pay-way
 {
-    background: #fff;
+    background: #252845;
+    color: #fff;
 }.pay-box .pay-way .choose
 {
     line-height: 1.33333rem;;
@@ -43,12 +44,12 @@
     margin-left: .26667rem;
 }.pay-box .pay-way .list .zfb-pay
 {
-    background: url('http://m.wxqing.cn/static/image/zfb.png') no-repeat;
+    background: url('/images/ic_alipay_29.png') no-repeat;
     background-position: 50%;;
     background-size: 80%;
 }.pay-box .pay-way .list .wx-pay
 {
-    background: url('http://m.wxqing.cn/static/image/wx.png') no-repeat;
+    background: url('/images/ic_wxpay_29.png') no-repeat;
     background-position: 50%;;
     background-size: 80%;
 }.pay-box .pay-way .list .name
@@ -62,22 +63,22 @@
     margin-left: .13333rem;
 }.pay-box .pay-way .list .select-div
 {
-    float: right;;
+    float: right;
 
     width: 1.33333rem;
     height: .66667rem;
 }.pay-box .pay-way .list .select
 {
-    position: static;;
+    position: static;
 
     border: none;
-    background: url('http://m.wxqing.cn/static/image/gou.png') no-repeat;
+    background: url('/images/ic_select_16.png') no-repeat;
     background-position: 50%;
     background-size: 50%;
 }.pay-box .pay-way .list:after
 {
     display: block;
-    clear: both;;
+    clear: both;
 
     content: '';
 }.pay-box .pay
@@ -87,12 +88,12 @@
     position: fixed;
     bottom: 0;
     left: 0;;
-
+    color: #fff;
     width: 100%;
     height: 1.33333rem;
     padding-left: .26667rem;
 
-    background: #fff;
+    background: #1F2038;
 }.pay-box .pay span
 {
     color: #ff0059;
@@ -105,8 +106,8 @@
     width: 2.66667rem;
     height: 1.33333rem;
 
-    text-align: center;;
+    text-align: center;
 
     color: #fff;
-    background: #ff0059;
+    background-image: linear-gradient(-225deg, #495AFF 0%, #F43B47 100%);
 }

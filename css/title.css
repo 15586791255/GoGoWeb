@@ -3,8 +3,6 @@
     position: relative;
 
     height: 1.06667rem;
-
-    background: #ebff00;
 }#title .back-btn
 {
     position: absolute;
@@ -14,22 +12,36 @@
     width: 1.06667rem;
     height: 1.06667rem;
 
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-
-    background: url('http://m.wxqing.cn/static/image/arrowl.png') no-repeat;
+    background: url('/images/ic_back_24.png') no-repeat;
     background-position: 50%;
     background-size: 50%;
-}#title .title-name
-{
+}#title .home-link {
+    position: absolute;
+    width: 1.06667rem;
+    height: 1.06667rem;
+    left: 1.06667rem;
+}#title .home-link .home-btn {
+    display: block;
+    text-align: center;
+    left: 1.06667rem;
+    width: 1.06667rem;
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    background: url(/images/ic_home_0_24.png) no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+}#title .home-link a{
+    display: block;
+}#title .title-name{
     font-size: .42667rem;
     font-weight: 700;
 }#title .right-div,
 #title .title-name
 {
     line-height: 1.06667rem;
-
+    color: #fff;
     text-align: center;
+    background: #1F2038;
 }#title .right-div
 {
     font-size: .37333rem;
@@ -40,4 +52,13 @@
 
     width: 2.66667rem;
     height: 1.06667rem;
+}#title .renovate-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url('/images/renovate.png') no-repeat;
+    background-position: 50%;
+    background-size: 50%;
 }

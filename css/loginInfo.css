@@ -1,0 +1,110 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}#Home {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}.login-info {
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    text-align: center;
+    background-image: linear-gradient(-180deg, #110E1F 0%, #1C1531 97%);
+}.login-info .logo{
+    margin: 0 auto;
+}.login-info .logo img{
+    display: block;
+    width: 4rem;
+    margin: 0 auto;
+}.login-info .phone-input{
+    position: relative;
+}.login-info .phone-input input{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+    display: block;
+    width: 70%;
+    height: 1.33333rem;
+    margin: 0 auto;
+    margin-top: .26667rem;
+    padding: 0 5%;
+    border-radius: 100px;
+    border: 2px solid #495AFF;
+    background-image: linear-gradient(-180deg, #110E1F 0%, #1C1531 97%);
+    outline:medium;
+    caret-color:#495AFF;
+    color: #fff;
+}.login-info .code{
+    margin: .36667rem auto;
+}.login-info .code input{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+    display: block;
+    width: 70%;
+    height: 1.33333rem;
+    margin: 0 auto;
+    padding: 0 5%;
+    border: 2px solid #495AFF;
+    border-radius: 100px;
+    background-image: linear-gradient(-180deg, #110E1F 0%, #1C1531 97%);
+    outline:medium;
+    caret-color:#495AFF;
+    color: #fff;
+}.login-info .login-btn{
+    font-size: .42667rem;
+    line-height: 1.33333rem;
+    width: 80%;
+    height: 1.33333rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(-225deg, #495AFF 0%, #F43B47 100%);
+    border-radius: 100px;
+}.login-info .login-other {
+    margin-top: .4rem;
+    width: 100%;
+}.login-info .login-other .division {
+    width: 5.66667rem;
+    height: .29333rem;
+    margin: 0 auto;
+    background: url('/images/user/fenge.png') no-repeat;
+    background-size: contain;
+}.login-info .login-other .btn {
+    width: 5.66667rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    padding: .4rem 0;
+}.login-info .login-other .btn .btn-wx {
+    width: 1.33333rem;
+    height: 1.33333rem;
+    margin: 0 auto;
+    background: url('/images/user/ic_wx_50.png') no-repeat;
+    background-size: contain;
+}.login-info .phone-input .get-code{
+    position: absolute;
+    top: 0rem;
+    right: 10%;
+    display: block;
+    width: 2.83333rem;
+    height: 1.33333rem;
+    color: #fff;
+}.login-info .phone-input .get-code-ing{
+    color: #acafad;
+}

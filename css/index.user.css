@@ -31,7 +31,7 @@
 }
 
 .goHome{
-    background: url(../images/ic_home_0_24.png) no-repeat;
+    background: url(/images/ic_home_0_24.png) no-repeat;
     background-size: contain;
     width: 4em;
     height: 4em;
@@ -44,7 +44,7 @@
 .shop{
     height: 2.8em;
     width: 2.8em;
-    background: url("../images/user/shop.png") no-repeat;
+    background: url("/images/user/shop.png") no-repeat;
     background-size: contain;
     position: absolute;
     margin-top:0.6em;
@@ -52,7 +52,7 @@
 .myCar{
     width: 2.8em;
     height: 2.8em;
-    background: url("../images/user/mycar.png") no-repeat;
+    background: url("/images/user/mycar.png") no-repeat;
     background-size: contain;;
     margin-left: 4em;
     position: absolute;
@@ -118,7 +118,7 @@
     width: 1.5em;
     position: relative;
     top: 0;
-    background: url(../images/user/gold.png) no-repeat;
+    background: url(/images/user/gold.png) no-repeat;
     background-size: cover;
     background-position: 0;
 }
@@ -249,7 +249,7 @@
     line-height: 4em;
     text-align: center;
     color: white;
-    background-image: linear-gradient(-225deg, #F43B47 0%, #495AFF 100%);
+    background-image: linear-gradient(-225deg, #495AFF 0%, #F43B47 100%);
     font-size: 1em;
     margin: 0 auto;
     min-height: 50px;
@@ -290,21 +290,21 @@
 .division{
     width: 65%;
     height: 2em;
-    background: url("../images/user/fenge.png") no-repeat;
+    background: url("/images/user/fenge.png") no-repeat;
     background-size: 100% auto;
     margin: 0 auto;
 }
 .btn-qq{
     width: 4em;
     height: 4em;
-    background: url("../images/user/ic_qq_50.png") no-repeat;
+    background: url("/images/user/ic_qq_50.png") no-repeat;
     background-size: contain;
     margin-left: 55%;
 }
 .btn-wx{
     width: 4em;
     height: 4em;
-    background: url("../images/user/ic_wx_50.png") no-repeat;
+    background: url("/images/user/ic_wx_50.png") no-repeat;
     background-size: contain;
     margin-left: 25%;
     float: left;

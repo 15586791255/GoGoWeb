@@ -64,26 +64,26 @@ function initHomeListDropload() {
                                 result +=  '<div class="history">';
                                 switch(data.items[i].status) {
                                 case 'apply':
-                                    result +=  '<div class="title">比赛未完成</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">比赛未完成</div></div>';
+                                    result +=  '<div class="title"><div class="left">比赛未完成</div><div class="right">-</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">比赛未完成</div></div>';
                                     break;
                                 case 'win':
                                     result +=  '<div class="title">赢了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">赢了</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">赢了</div></div>';
                                     break;
                                 case 'lose':
                                     result +=  '<div class="title">输了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">输了</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">输了</div></div>';
                                     break;
                                 case 'invalid':
                                     result +=  '<div class="title">被取消了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">被取消了</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">被取消了</div></div>';
                                     break;
                                 }
-                                result +=  '<div class="time"><div style="float:left;">时间</div><div style="float:right;">' + timestampToDate(data.items[i].create_ts) + '</div></div>';
-                                result +=  '<div class="race"><div style="float:left;">比赛</div><div style="float:right;">' + data.items[i].race.race_name + '</div></div>';
-                                result +=  '<div class="guessing"><div style="float:left;">竞猜</div><div style="float:right;">' + data.items[i].bettings[0].title + '/' + data.items[i].bettings[0].items[0].title + '</div></div>';
-                                result +=  '<div class="batting"><div style="float:left;">投注</div><div style="float:right;">竞猜币' + data.items[i].coin + '/赔率' + data.items[i].odds + '</div></div>';
+                                result +=  '<div class="time"><div class="left">时间</div><div class="right">' + timestampToDate(data.items[i].create_ts) + '</div></div>';
+                                result +=  '<div class="race"><div class="left">比赛</div><div class="right">' + data.items[i].race.race_name + '</div></div>';
+                                result +=  '<div class="guessing"><div class="left">竞猜</div><div class="right">' + data.items[i].bettings[0].title + '/' + data.items[i].bettings[0].items[0].title + '</div></div>';
+                                result +=  '<div class="batting"><div class="left">投注</div><div class="right">竞猜币' + data.items[i].coin + '/赔率' + data.items[i].odds + '</div></div>';
                                 result +=  html;
                                 result +=  '</div>';
                                 result +=  '</div>';
@@ -136,26 +136,26 @@ function initHomeListDropload() {
                                 result +=  '<div class="history">';
                                 switch(data.items[i].status) {
                                 case 'apply':
-                                    result +=  '<div class="title">比赛未完成</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">比赛未完成</div></div>';
+                                    result +=  '<div class="title"><div class="left">比赛未完成</div><div class="right">-</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">比赛未完成</div></div>';
                                     break;
                                 case 'win':
-                                    result +=  '<div class="title">赢了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">赢了</div></div>';
+                                    result +=  '<div class="win"><div class="left">+ ' + data.items[i].coin * data.items[i].odds + '<span>竞猜币</span></div><div class="right">WIN</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">赢</div></div>';
                                     break;
                                 case 'lose':
-                                    result +=  '<div class="title">输了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">输了</div></div>';
+                                    result +=  '<div class="lose"><div class="left">- ' + data.items[i].coin * data.items[i].odds + '<span>竞猜币</span></div><div class="right">LOSE</div></div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">输</div></div>';
                                     break;
                                 case 'invalid':
-                                    result +=  '<div class="title">被取消了</div>';
-                                    html = '<div class="result"><div style="float:left;">结果</div><div style="float:right;">被取消了</div></div>';
+                                    result +=  '<div class="title">被取消</div>';
+                                    html = '<div class="result"><div class="left">结果</div><div class="right">被取消</div></div>';
                                     break;
                                 }
-                                result +=  '<div class="time"><div style="float:left;">时间</div><div style="float:right;">' + timestampToDate(data.items[i].create_ts) + '</div></div>';
-                                result +=  '<div class="race"><div style="float:left;">比赛</div><div style="float:right;">' + data.items[i].race.race_name + '</div></div>';
-                                result +=  '<div class="guessing"><div style="float:left;">竞猜</div><div style="float:right;">' + data.items[i].bettings[0].title + '/' + data.items[i].bettings[0].items[0].title + '</div></div>';
-                                result +=  '<div class="batting"><div style="float:left;">投注</div><div style="float:right;">竞猜币' + data.items[i].coin + '/赔率' + data.items[i].odds + '</div></div>';
+                                result +=  '<div class="time"><div class="left">时间</div><div class="right">' + timestampToDate(data.items[i].create_ts) + '</div></div>';
+                                result +=  '<div class="race"><div class="left">比赛</div><div class="right">' + data.items[i].race.race_name + '</div></div>';
+                                result +=  '<div class="guessing"><div class="left">竞猜</div><div class="right">' + data.items[i].bettings[0].title + '/' + data.items[i].bettings[0].items[0].title + '</div></div>';
+                                result +=  '<div class="batting"><div class="left">投注</div><div class="right">竞猜币' + data.items[i].coin + '/赔率' + data.items[i].odds + '</div></div>';
                                 result +=  html;
                                 result +=  '</div>';
                                 result +=  '</div>';
@@ -191,11 +191,10 @@ function initHomeListDropload() {
 function timestampToDate(timestamp) {
     var date = new Date(parseInt(timestamp));
     Y = date.getFullYear() + '年';
-    M = (date.getMonth() + 1 < 10 ? '0'+(date.getMonth() + 1) : date.getMonth() + 1) + '月';
-    D = date.getDate() + '日 ';
-    h = date.getHours() + ':';
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '月';
+    D = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + '日 ';
+    h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours())  + ':';
     m = date.getMinutes();
-
     return Y + M + D + h + m;
 }
 

@@ -11,7 +11,7 @@ a
 
     height: 1.33333rem;
 
-    background: #2f0233;
+    background: #1F2038;
 }.user-info .user-img
 {
     position: absolute;
@@ -109,8 +109,8 @@ a
     position: absolute;
     top: 0;
     right: 0;
-
-    width: 2.66667rem;
+    width: 1.33333rem;
+    /*width: 2.66667rem;*/
     height: 1.33333rem;
 }.user-info .detail-link a
 {
@@ -433,7 +433,7 @@ a
     height: .29333rem;
     margin: 0 auto;
 
-    background: url('http://m.wxqing.cn/static/image/fenge.png') no-repeat;
+    background: url('/images/user/fenge.png') no-repeat;
     background-size: contain;
 }.user-info .login-page .no-login .login-other .btn
 {
@@ -496,7 +496,7 @@ a
     height: .8rem;
 
     background: red;
-    background: url('http://m.wxqing.cn/static/image/exit.png') no-repeat;
+    background: url('/images/user/exit.png') no-repeat;
     background-position: 50%;
     background-size: contain;
 }.user-info .login-page .login-ed .setBtn
@@ -509,37 +509,58 @@ a
     height: .8rem;
 
     background: red;
-    background: url('http://m.wxqing.cn/static/image/set.png') no-repeat;
+    background: url('/images/user/set.png') no-repeat;
     background-size: contain;
 }.user-info .login-page .login-ed .avatar
 {
     overflow: hidden;
-
     width: 2rem;
     height: 2rem;
-    margin: .53333rem auto;
-
+    margin: .53333rem 1.533333rem;
     opacity: 1;
     border-radius: 2rem;
+}.user-info .login-page .login-ed .avatar span{
+    position: absolute;
+    display: block;
+    width: 4rem;
+    height: 2rem;
+    margin-left: 2.3rem
 }.user-info .login-page .login-ed .avatar img
 {
     width: 100%;
-}.user-info .login-page .login-ed .name
+}.user-info .login-page .login-ed .g-coins
 {
+    font-size: .35333rem;
+    height: 0.66667rem;
+    top: 0.66667rem;
+    left: 0;
+    position: absolute;
+    line-height: 0.66667rem;
+    color: gray;
+}.user-info .login-page .login-ed .avatar .name {
     font-size: .45333rem;
-}.user-info .login-page .login-ed .myMoney
+    height: 0.66667rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    line-height: 0.66667rem;
+}.user-info .login-page .login-ed .avatar .myMoney{
+    position: absolute;
+    top: 1.3334rem;
+}.user-info .login-page .login-ed .go-btn
 {
-    width: 6.66667rem;
-    margin: 0 auto;
-
-    border-top: 1px solid #e7e4e4;
-    border-bottom: 1px solid #e7e4e4;
+    position: absolute;
+    width: 1.06667rem;
+    height: .53333rem;
+    background: url('/images/ic_go_12.png') no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+    right: .53333rem;
 }.user-info .login-page .login-ed .myMoney .gold,
 .user-info .login-page .login-ed .myMoney .jifen,
 .user-info .login-page .login-ed .myMoney .zuanshi
 {
     height: .8rem;
-    margin: .26667rem 0;
 }.user-info .login-page .login-ed .myMoney .gold div,
 .user-info .login-page .login-ed .myMoney .jifen div,
 .user-info .login-page .login-ed .myMoney .zuanshi div
@@ -610,6 +631,15 @@ a
     padding: .26667rem 0;
 
     border-bottom: 1px solid #e7e4e4;
+}.user-info .login-page .login-ed .change a,
+.user-info .login-page .login-ed .history a,
+.user-info .login-page .login-ed .home a,
+.user-info .login-page .login-ed .msg a
+{
+    display: block;
+}.user-info .login-page .login-ed .href{
+    width: 6.66667rem;
+    height: .53333rem;
 }.user-info .login-page .login-ed .change .icon,
 .user-info .login-page .login-ed .history .icon,
 .user-info .login-page .login-ed .home .icon,
@@ -620,7 +650,7 @@ a
     width: .53333rem;
     height: .53333rem;
 
-    background: url('http://m.wxqing.cn/static/image/history.png') no-repeat;
+    background: url('/images/history.png') no-repeat;
     background-size: contain;
 }.user-info .login-page .login-ed .change .text,
 .user-info .login-page .login-ed .history .text,
@@ -638,7 +668,7 @@ a
     background-size: contain;
 }.user-info .login-page .login-ed .change .icon
 {
-    background: url('http://m.wxqing.cn/static/image/duihuan.png') no-repeat;
+    background: url('/images/recharge.png') no-repeat;
     background-size: contain;
 }.user-info .login-page .login-ed .msg .icon
 {
@@ -765,4 +795,25 @@ a
     text-align: center;
 
     background: #fff;
+}.user-info .login-link{
+    position: absolute;
+    width: 2.93333rem;
+    height: 1.33333rem;
+    color: #fff;
+}.user-info .login-link a{
+    display: block;
+}.user-info .login-link .goLogin{
+    display: block;
+    height: 1.33333rem;
+    line-height: 1.33333rem;
+    font-size: 0.5333rem;
+    text-align: center;
+    color: #fff;
+}.user-info .top-title{
+    display: block;
+    height: 1.33333rem;
+    text-align: center;
+    color: #fff;
+    line-height: 1.33333rem;
+    font-size: .42667rem;
 }
