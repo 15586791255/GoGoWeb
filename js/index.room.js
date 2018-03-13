@@ -1,5 +1,5 @@
 function bindBtn() {
-    $(document).on("click", ".back-btn", function(){
+    $(".back-btn").click(function(){
         javascript:history.back(-1);
     });
 }
@@ -9,7 +9,6 @@ var race_id = null;
 $(function() {
     race_id = getSessionStorage(sessionStorageJsonKey[3]);
     initRoom();
-    bindBtn();
 });
 
 function timestampToDate(timestamp) {
@@ -107,6 +106,7 @@ function requestBetlist(_coin) {
                     'team_b_rate': changeTwoDecimal(100 * vote_b / (vote_a + vote_b)) + "%"
                   }[key]; });
                 $("#Home").append(sourceLogined);
+                bindBtn();
 	            var html = '';
 	            if (arrLen == 1) {
 	                html += '<li data-battlenumber="' + race.race_id + "/" + betting_tps[0].tp + '" class="room-bet-menu-0 room_bet_1_click_1 room_bet_1_click">';
