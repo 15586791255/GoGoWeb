@@ -129,7 +129,7 @@ function requestBetlist(_coin) {
 	        } else if (data.code == 500) {
 	            console.log('data.code = ' + data.msg);
 	        } else if (data.code == 404)　{
-                window.location = $("base").attr("href") + testUrl + "index.html";
+                window.location.href = $("base").attr("href") + testUrl + "index.html";
             }
 	    },
 	    error: function(jqXHR, textStatus, errorThrown){
@@ -226,13 +226,13 @@ function initJoinGuessEvent() {
                 $(".window").hide();
                 $(".window").children().hide();
                 $(".window h2").parent().hide();
-                window.location = $("base").attr("href") + testUrl + "login.html";
+                window.location.href = $("base").attr("href") + testUrl + "login.html";
                 return;
             } else if (parseInt(gold) > userInfo.coin) {
                 $(".window").hide();
                 $(".window").children().hide();
                 $(".window h2").parent().hide();
-                window.location = $("base").attr("href") + testUrl + "recharge.html";
+                window.location.href = $("base").attr("href") + testUrl + "recharge.html";
                 return;
             } else if (parseInt(gold) < 10) {
                 $(".window").hide();
@@ -459,7 +459,7 @@ function refreshRate(_race_id) {
                         } else if (data.code == 500) {
                             console.log('data.code = ' + data.msg);
                         } else if (data.code == 404)　{
-                            window.location = $("base").attr("href") + testUrl + "index.html";
+                            window.location.href = $("base").attr("href") + testUrl + "index.html";
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown){

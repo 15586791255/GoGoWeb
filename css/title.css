@@ -52,6 +52,10 @@
 
     width: 2.66667rem;
     height: 1.06667rem;
+}#title .renovate-link{
+    position: absolute;
+    width: 1.06667rem;
+    height: 1.06667rem;
 }#title .renovate-btn{
     position: absolute;
     top: 0;
