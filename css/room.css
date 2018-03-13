@@ -544,7 +544,7 @@ em, i {
     text-align: center;
 }
 .room_bet_lists dd p i:nth-child(1) {
-    font-size: .4rem;
+    font-size: .33333rem;
     color: #fff;
     padding: 0.2333rem 0 0 0;
 }
@@ -582,7 +582,7 @@ em, i {
 .room dl:nth-of-type(5) dd p i:nth-child(1),
 .room dl:nth-of-type(6) dd p i:nth-child(1),
 .room dl:nth-of-type(7) dd p i:nth-child(1) {
-    font-size: .4rem;
+    font-size: .33333rem;
     color: #fff;
     padding: 0.2333rem 0 0 0;
 }
@@ -649,7 +649,7 @@ em, i {
 .room .room-bet-win-0 b,
 .room .room-bet-win-1 b {
     color: #F43B47;
-    font-size: .4rem;
+    font-size: .33333rem;
 }
 .room dl:nth-of-type(2) dd p.room-bet-win--1,
 .room dl:nth-of-type(2) dd p.room-bet-win--2 {
