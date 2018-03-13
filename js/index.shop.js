@@ -14,7 +14,6 @@ $(function() {
 });
 
 function inithome() {
-    var data = getSessionStorage("userInfo");
     var html = document.getElementById("home").innerHTML;
     var source = '';
     var nologin = '';

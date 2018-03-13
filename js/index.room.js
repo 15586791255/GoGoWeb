@@ -211,7 +211,7 @@ function initJoinGuessEvent() {
         var guessTitle = $(this).attr("data-guessTitle");
         var battleNumber = $(".room-bet .room-bet-menu-click").text();
         var userInfo = getSessionStorage(sessionStorageJsonKey[1]);
-        if (userInfo != null) {
+        if (userInfo != false) {
             $('.window-betpay .my-gold').text(userInfo.coin);
         }
         $('.window-betpay .title').text(battleNumber + " " + guessTitle + " " + itemName);
@@ -222,7 +222,7 @@ function initJoinGuessEvent() {
         $('.window-betpay .btn-join').unbind().click(function() {
             var gold = $('.window-betpay .gold').val();
             var userInfo = getSessionStorage(sessionStorageJsonKey[1]);
-            if (userInfo == null) {
+            if (userInfo == false) {
                 $(".window").hide();
                 $(".window").children().hide();
                 $(".window h2").parent().hide();
@@ -380,7 +380,6 @@ function initAlert() {
                     $(".window-support").hide();
                     $(".window").hide();
                     msg_show(true, "支持成功");
-                    /*loadGifts();*/
                     refreshRate(race_id);
                     refreshUserInfo();
                 } else if (data.code == 500) {
