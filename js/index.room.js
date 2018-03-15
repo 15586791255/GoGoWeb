@@ -176,7 +176,7 @@ function loadGuess(_battleNumber) {
                 $("div#ul-lists").html(html);
                 setTimeout(function() {
                     initBattleNumbers(data[0].race_id);
-                    initJoinGuessEvent();
+                    //initJoinGuessEvent();
                 }, 200);
             } else if (data.code == 500) {
 

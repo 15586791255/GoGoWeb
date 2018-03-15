@@ -36,7 +36,7 @@ function sendRquest() {
                         html += '<div class="huiIN">';
                         html += '<div class="left">';
                         html += '<div class="name">' + coin[index].gift_name + 'x' + coin[index].gift_count + '</div>';
-                        html += '<div class="money">' + coin[index].coin_count + '<span>竞猜币</span></div>';
+                        //html += '<div class="money">' + coin[index].coin_count + '<span>竞猜币</span></div>';
                         html += '</div>';
                         html += '<div class="right">';
                         if (index > 0) {
