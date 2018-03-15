@@ -164,7 +164,7 @@ function initHomeListDropload() {
                                 result += '<div class="ing">';
                                 switch(data.items[i].status) {
                                 case 'ready':
-                                    result += '去竞猜';
+                                    //result += '去竞猜';
                                     break
                                 case 'end':
                                     result += '结果';
