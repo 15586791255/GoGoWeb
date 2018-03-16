@@ -125,7 +125,7 @@ function requestBetlist(_coin) {
 	            }
 	            $("ul#ul").html(html);
                 initSupportEvent();
-	            loadGuess(race.race_id + "/" + betting_tps[0].tp);
+	            //loadGuess(race.race_id + "/" + betting_tps[0].tp);
 	        } else if (data.code == 500) {
 	            console.log('data.code = ' + data.msg);
 	        } else if (data.code == 404)　{
@@ -195,7 +195,7 @@ function initBattleNumbers(_race_id) {
         $("#ul li").removeClass("room_bet_1_click");
         $(this).addClass("room_bet_1_click");
         var battleNumber = $(this).attr("data-battleNumber");
-        loadGuess(battleNumber);
+        //loadGuess(battleNumber);
     });
 };
 

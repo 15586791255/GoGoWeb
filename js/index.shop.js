@@ -14,10 +14,6 @@ $(function() {
 });
 
 function inithome() {
-    var html = document.getElementById("home").innerHTML;
-    var source = '';
-    var nologin = '';
-    var logined = '';
     var shop = document.getElementById("shop").innerHTML;
 
     $("#Home").append(shop);
