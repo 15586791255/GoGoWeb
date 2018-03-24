@@ -53,7 +53,7 @@ function initalipay() {
             var index = data.data.indexOf('</form>');
             var url = data.data.substr(0, index);
             url += appendButton;
-            $("#alipay").append(data.data);*/
+            $("#alipay").append(data.data);
 
             /*var btn = document.querySelector(".J-btn-submit");
             btn.addEventListener("click", function (e) {
