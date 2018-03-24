@@ -124,7 +124,7 @@ a
     height: .86667rem;
     margin-top: .33333rem;
 
-    background: url('http://m.wxqing.cn/static/image/shop.png') no-repeat;
+    background: url('/images/ic_store_0_24.png') no-repeat;
     background-size: contain;
 }.user-info .detail-link .shop span
 {
