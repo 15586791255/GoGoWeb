@@ -234,6 +234,9 @@ function initJoinGuessEvent() {
                 window.location.href = $("base").attr("href") + testUrl + "login.html";
                 return;
             } else if (parseInt(gold) > userInfo.coin) {
+                $(".window").hide();
+                $(".window").children().hide();
+                $(".window h2").parent().hide();
                 $("#am-modal-container").show();
                 return;
             } else if (parseInt(gold) < 10) {
