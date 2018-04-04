@@ -5,6 +5,7 @@ function bindBtn() {
 }
 
 var race_id = null;
+var race_status = null;
 
 $(function() {
     race_id = getSessionStorage(sessionStorageJsonKey[3]);
@@ -63,6 +64,7 @@ function requestBetlist(_coin) {
                 var arrLen = betting_tps.length;
                 var gift_a = data.data.race.team_a_gift;
                 var gift_b = data.data.race.team_b_gift;
+                race_status = data.data.race.status;
                 if(_coin != undefined && _coin != null && _coin != "") {
                     var vote_a = 0;
                     var vote_b = 0;
@@ -229,16 +231,19 @@ function initJoinGuessEvent() {
                 window.location.href = $("base").attr("href") + testUrl + "login.html";
                 return;
             } else if (parseInt(gold) > userInfo.coin) {
-                $(".window").hide();
-                $(".window").children().hide();
-                $(".window h2").parent().hide();
-                window.location.href = $("base").attr("href") + testUrl + "recharge.html";
+                $("#am-modal-container").show();
                 return;
             } else if (parseInt(gold) < 10) {
                 $(".window").hide();
                 $(".window").children().hide();
                 $(".window h2").parent().hide();
                 msg_show(false, "下注金额必须大于10");
+                return;
+            } else if (race_status == 'end') {
+                $(".window").hide();
+                $(".window").children().hide();
+                $(".window h2").parent().hide();
+                msg_show(false, "投注失败,已超出投注时间");
                 return;
             }
             var params = {
@@ -308,7 +313,14 @@ function initSupportEvent() {
         supportTeamId = $(this).attr("data-teamId");
         supportTeamName = $(this).attr("data-teamName");
         supportRaceId = $(this).attr("data-raceId");
-        loadGifts();
+        if (race_status == 'end') {
+            $(".window").hide();
+            $(".window").children().hide();
+            $(".window h2").parent().hide();
+            msg_show(false, "比赛已结束");
+        } else {
+            loadGifts();
+        }
     });
 };
 
