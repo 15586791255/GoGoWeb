@@ -178,7 +178,10 @@ function loadGuess(_battleNumber) {
                 $("div#ul-lists").html(html);
                 setTimeout(function() {
                     initBattleNumbers(data[0].race_id);
-                    initJoinGuessEvent();
+                    if (race_status != 'end') {
+                        initJoinGuessEvent();
+                    }
+                    
                 }, 200);
             } else if (data.code == 500) {
 
@@ -238,12 +241,6 @@ function initJoinGuessEvent() {
                 $(".window").children().hide();
                 $(".window h2").parent().hide();
                 msg_show(false, "下注金额必须大于10");
-                return;
-            } else if (race_status == 'end') {
-                $(".window").hide();
-                $(".window").children().hide();
-                $(".window h2").parent().hide();
-                msg_show(false, "投注失败,已超出投注时间");
                 return;
             }
             var params = {
@@ -313,12 +310,7 @@ function initSupportEvent() {
         supportTeamId = $(this).attr("data-teamId");
         supportTeamName = $(this).attr("data-teamName");
         supportRaceId = $(this).attr("data-raceId");
-        if (race_status == 'end') {
-            $(".window").hide();
-            $(".window").children().hide();
-            $(".window h2").parent().hide();
-            msg_show(false, "比赛已结束");
-        } else {
+        if (race_status != 'end') {
             loadGifts();
         }
     });
