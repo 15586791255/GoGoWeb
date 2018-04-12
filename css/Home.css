@@ -298,7 +298,7 @@
     text-align: center;
 }.HomeList .list .top-content .left {
     float: left;
-    width: 50%;
+    width: 70%;
 }.HomeList .list .left
 {
     float: left;
@@ -358,16 +358,18 @@
 }.HomeList .list .center .name
 {
     margin-top: .13333rem;
-}.HomeList .list .right
-{
+}.HomeList .list .top-content .right{
+    float: right;
+    width: 30%;
+}.HomeList .list .right{
     float: right;
     width: 40%;
-}.HomeList .list .right .ing{
+}.HomeList .list .top-content .right .ing{
     float: right;
     line-height: 1.3333rem;
     height: 1.3333rem;
     color: #B1BAEE;
-}.HomeList .list .right .icon{
+}.HomeList .list .top-content .right .icon{
     width: 1.06667rem;
     height: 1.33333rem;
     background: url(/images/ic_go_12.png) no-repeat;
