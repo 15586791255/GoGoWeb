@@ -288,13 +288,13 @@
     margin-top: .26667rem;
 }.HomeList .list .detail .bottom-content .left .team-name
 {
-    margin-top: 10%;
-    float: left;
+    /*margin-top: 10%;
+    float: left;*/
     text-align: center;
 }.HomeList .list .detail .bottom-content .right .team-name
 {
-    margin-top: 10%;
-    float: right;
+    /*margin-top: 10%;
+    float: right;*/
     text-align: center;
 }.HomeList .list .top-content .left {
     float: left;
@@ -307,14 +307,15 @@
     line-height: .66665rem;
 }.HomeList .list .detail .bottom-content .left .team-logo{
     float: left;
-    width: 50%;
+    width: 100%;
 }.HomeList .list .detail .bottom-content .right .team-logo{
     float: right;
-    width: 50%;
+    width: 100%;
 }.HomeList .list .center
 {
     float: left;
     width: 20%;
+    margin-top: 5%;
 }.HomeList .list .center .btn
 {
     font-weight: 100;
