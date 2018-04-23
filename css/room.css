@@ -552,12 +552,7 @@ em, i {
     color: #F43B47;
     font-weight: normal;
 }
-.room dl:nth-of-type(2) dd p,
-.room dl:nth-of-type(3) dd p,
-.room dl:nth-of-type(4) dd p,
-.room dl:nth-of-type(5) dd p,
-.room dl:nth-of-type(6) dd p,
-.room dl:nth-of-type(7) dd p {
+.room dl dd p {
     float: left;
     height: 1.2rem;
     margin: 0 0.1rem 0.2rem 0;
@@ -636,9 +631,9 @@ em, i {
 .room .room-bet-win--2.room-bet-my {
     background-image: url(/images/match/win--2.png);
 }
-.room .room-bet-win-0 {
+/*.room .room-bet-win-0 {
     border: 2px #fff solid;
-}
+}*/
 .room .room-bet-win-0 i {
     color: #fff;
 }
