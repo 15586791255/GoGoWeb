@@ -134,8 +134,9 @@ function getCode() {
         $.ajax({
             url: "api/account/sms",
             dataType: 'JSON',
-            timeout: 5000,
+            timeout: 50000,
             type: "POST",
+            async: false,
             data: {
                 "tel":inputNumber
             },
@@ -163,7 +164,7 @@ function refreshUserInfo() {
         $.ajax({
             url: "api/account/token",
             dataType: 'JSON',
-            timeout: 5000,
+            timeout: 50000,
             type: "POST",
             data: {
                 "refresh_token": loginInfo.refresh_token
@@ -190,7 +191,7 @@ function getUserInfo() {
     $.ajax({
         url: "api/core/user",
         dataType: 'JSON',
-        timeout: 5000,
+        timeout: 50000,
         type: "GET",
         beforeSend: function(xhr){
             sendHeader(xhr, getSessionStorage(sessionStorageJsonKey[0]));

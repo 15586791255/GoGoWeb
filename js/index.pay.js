@@ -74,7 +74,8 @@ function requestAlipay() {
   $.ajax({
       url: basePath + "api/pay/phone/alipay/order/coin_plan/" + Request['coin_plan_id'],
       dataType: 'JSON',
-      timeout: 5000,
+      timeout: 50000,
+      async: false,
       type: "POST",
       beforeSend: function(xhr){
           sendHeader(xhr, getSessionStorage(sessionStorageJsonKey[0]));
@@ -98,7 +99,8 @@ function requestWxpay() {
   $.ajax({
       url: "api/pay/weixin/order/coin_plan/" + Request['coin_plan_id'],
       dataType: 'JSON',
-      timeout: 5000,
+      timeout: 50000,
+      async: false,
       type: "POST",
       beforeSend: function(xhr){
           sendHeader(xhr, getSessionStorage(sessionStorageJsonKey[0]));

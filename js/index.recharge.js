@@ -12,7 +12,8 @@ function sendRquest() {
     $.ajax({
         url: basePath + "api/core/coin/plans",
         dataType: 'JSON',
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         type: "GET",
         beforeSend: function(xhr){
             sendHeaderMin(xhr);

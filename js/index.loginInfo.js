@@ -6,7 +6,8 @@ function login() {
             $.ajax({
                 url: "api/account/sms_login",
                 dataType: 'JSON',
-                timeout: 5000,
+                timeout: 50000,
+                async: false,
                 type: "POST",
                 data: {
                     "tel": inputNumber,
@@ -21,7 +22,8 @@ function login() {
                         $.ajax({
                             url: "api/core/user",
                             dataType: 'JSON',
-                            timeout: 5000,
+                            timeout: 50000,
+                            async: false,
                             type: "GET",
                             beforeSend: function(xhr){
                                 sendHeader(xhr, getSessionStorage(sessionStorageJsonKey[0]));

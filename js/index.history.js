@@ -39,7 +39,7 @@ function initHomeListDropload() {
             $.ajax({
                 url: "api/core/betting",
                 dataType: 'JSON',
-                timeout: 5000,
+                timeout: 50000,
                 type: "GET",
                 data: {
                     index: 0,
@@ -112,7 +112,7 @@ function initHomeListDropload() {
             $.ajax({
                 type: 'GET',
                 url: "api/core/betting",
-                timeout: 5000,
+                timeout: 50000,
                 dataType: 'JSON',
                 data: {
                     index: racesIndex,

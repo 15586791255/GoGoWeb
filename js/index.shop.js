@@ -51,7 +51,8 @@ function initNavList(_id) {
     $.ajax({
         type: 'GET',
         url: "api/mall/goods/",
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         dataType: 'JSON',
         data: {
             'tp': _id

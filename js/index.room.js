@@ -27,7 +27,8 @@ function initRoom() {
     $.ajax({
         url: basePath + "api/core/coin/plans",
         dataType: 'JSON',
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         type: "GET",
         beforeSend: function(xhr){
             sendHeaderMin(xhr);
@@ -51,7 +52,8 @@ function requestBetlist(_coin) {
 	$.ajax({
 	    type: 'GET',
 	    url: "api/core/race2/" + race_id,
-	    timeout: 5000,
+	    timeout: 50000,
+        async: false,
 	    dataType: 'JSON',
 	    beforeSend: function(xhr){
 	        xhr.setRequestHeader('pt', 'web');
@@ -144,7 +146,8 @@ function loadGuess(_battleNumber) {
     $.ajax({
         type: 'GET',
         url: "api/core/race2/" + _battleNumber,
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         dataType: 'JSON',
         beforeSend: function(xhr){
             xhr.setRequestHeader('pt', 'web');
@@ -254,7 +257,8 @@ function initJoinGuessEvent() {
             $.ajax({
                 type: 'POST',
                 url: "api/core/betting",
-                timeout: 5000,
+                timeout: 50000,
+                async: false,
                 dataType: 'JSON',
                 contentType: 'application/json;charset=uft-8',
                 data: JSON.stringify(params),
@@ -325,7 +329,8 @@ function loadGifts() {
     $.ajax({
         type: 'GET',
         url: "api/core/user",
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         dataType: 'JSON',
         beforeSend: function(xhr){
             sendHeader(xhr, getSessionStorage(sessionStorageJsonKey[0]));
@@ -376,7 +381,8 @@ function initAlert() {
         $.ajax({
             type: 'POST',
             url: "api/core/race2/coin_gift",
-            timeout: 5000,
+            timeout: 50000,
+            async: false,
             dataType: 'JSON',
             data: params,
             beforeSend: function(xhr){
@@ -406,7 +412,8 @@ function refreshRate(_race_id) {
     $.ajax({
         url: basePath + "api/core/coin/plans",
         dataType: 'JSON',
-        timeout: 5000,
+        timeout: 50000,
+        async: false,
         type: "GET",
         beforeSend: function(xhr){
             sendHeaderMin(xhr);
@@ -417,7 +424,8 @@ function refreshRate(_race_id) {
                 $.ajax({
                     type: 'GET',
                     url: "api/core/race2/" + _race_id,
-                    timeout: 5000,
+                    timeout: 50000,
+                    async: false,
                     dataType: 'JSON',
                     beforeSend: function(xhr){
                         xhr.setRequestHeader('pt', 'web');

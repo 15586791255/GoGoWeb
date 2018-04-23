@@ -16,7 +16,7 @@ function getHotRaces() {
     $.ajax({
         url: "api/core/races/hot",
         dataType: 'JSON',
-        timeout: 5000,
+        timeout: 50000,
         type: "GET",
         beforeSend: function(xhr){
             sendHeaderMin(xhr);
@@ -132,7 +132,7 @@ function initHomeListDropload() {
             $.ajax({
                 url: "api/core/races2",
                 dataType: 'JSON',
-                timeout: 5000,
+                timeout: 50000,
                 type: "GET",
                 data: {
                     index: 0,
@@ -214,7 +214,7 @@ function initHomeListDropload() {
             $.ajax({
                 type: 'GET',
                 url: "api/core/races2",
-                timeout: 5000,
+                timeout: 50000,
                 dataType: 'JSON',
                 data: {
                     index: racesIndex,
