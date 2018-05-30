@@ -45,7 +45,9 @@ $('body').on('touchmove', function (e) {
 });
 
 function checkScroll(e){
-    console.log("check");
+    console.log($('.list').scrollTop());
+    console.log($('.lists').scrollTop());
+    console.log($('.HomeList').scrollTop());
 
     endY = e.originalEvent.changedTouches[0].pageY;
     // 若已经移到页面最上方，则不允许再向下滑动
