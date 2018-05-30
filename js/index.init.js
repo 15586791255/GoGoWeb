@@ -2,63 +2,10 @@ $(function() {
     inithome();
     initHotRaces();
     initHomeList();
-    //initFoot();
+    initFoot();
     initDetailEvent();
 });
 
-var startY, endY; // 记录滑动的开始Y坐标和当前Y坐标
-var timer = null;
-var previous = null;
-var atleast = 10;
-
-$('body').on('touchstart',function(e){
-    startY = e.originalEvent.changedTouches[0].pageY;
-});
-
-// 禁用手机默认的触屏滚动行为
-$('body').on('touchmove', function (e) {
-    // 若target不在排行榜里
-    if(!$(e.target).is($('.list')) && !$(e.target).parents('.list').length > 0){
-        e.preventDefault();
-    }
-
-    // 若target在排行榜里
-    else{
-        // 函数节流
-        var now = +new Date();
-        if(!previous){
-            previous = now;
-        }
-        if (now - previous > atleast){
-            checkScroll(e);
-            // 重置上一次开始时间为本次结束时间
-            previous = now;
-        }
-        else{
-            clearTimeout(timer);
-
-            timer = setTimeout(function(){
-                checkScroll(e);
-            },200);
-        }
-    }
-});
-
-function checkScroll(e){
-    console.log($('.list').scrollTop());
-    console.log($('.lists').scrollTop());
-    console.log($('.HomeList').scrollTop());
-
-    endY = e.originalEvent.changedTouches[0].pageY;
-    // 若已经移到页面最上方，则不允许再向下滑动
-    if($('.HomeList').scrollTop() == 0 && endY > startY){
-        e.preventDefault();
-    }
-    // 若已经移到页面最下方，则不允许再向上滑动
-    if($('.HomeList').scrollTop() + $('.HomeList').height() == $('.HomeList')[0].scrollHeight && endY < startY){
-        e.preventDefault();
-    }
-}
 function initHotRaces() {
     var html = document.getElementById("HotSwiper").innerHTML;
     $("#Home").append(html);
