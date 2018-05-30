@@ -2946,7 +2946,7 @@ a
     }
 }.HomeList div:not(:last-child) .am-list-line
 {
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
 }@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx)
 {
     html:not([data-scale]) .HomeList div:not(:last-child) .am-list-line
