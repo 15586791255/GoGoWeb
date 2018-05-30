@@ -44,6 +44,7 @@
 }.room-top .detail .team-name{
 	margin-top: .13333rem;
     text-align: center;
+    font-size: 0.366667rem;
 }.room-top .detail .center{
 	float: left;
     width: 20%;
