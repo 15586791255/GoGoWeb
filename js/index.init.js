@@ -109,9 +109,8 @@ function initHomeList() {
 }
 
 // 页数
-var page = 0;
 var size = 10;
-var racesIndex = "0";
+var racesIndex = 0;
 var dropload = null;
 
 function initHomeListDropload() {
@@ -146,9 +145,8 @@ function initHomeListDropload() {
                 },
                 success: function(data){
                     if (data.code == 200) {
-                        racesIndex = 0;
                         var data = data.data;
-                        raceIndex = data.index;
+                        racesIndex = data.index;
                         var arrLen = data.items.length;
                         var result = '';
                         if (arrLen > 0) {
@@ -196,11 +194,9 @@ function initHomeListDropload() {
                             }
                         } else {
                             dropload.noData();
-                            dropload.resetload();
                         }
                     } else if (data.code == 500) {
                         dropload.noData();
-                        dropload.resetload();
                     }
                     setTimeout(function(){
                         $('.lists').html(result);
@@ -279,11 +275,9 @@ function initHomeListDropload() {
                             }
                         } else {
                             dropload.noData();
-                            dropload.resetload();
                         }
                     } else if (data.code == 500) {
                         dropload.noData();
-                        dropload.resetload();
                     }
                     setTimeout(function(){
                         // 插入数据到页面，放到最后面
