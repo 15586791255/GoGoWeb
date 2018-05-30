@@ -1,5 +1,4 @@
 $(function() {
-    initListener();
     inithome();
     initHotRaces();
     initHomeList();
