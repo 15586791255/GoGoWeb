@@ -404,13 +404,13 @@
 }.HomeList .detail .time
 {
     line-height: .66665rem;
-}.HomeList .detail:after
+}./*HomeList .detail:after
 {
     display: block;
     clear: both;
 
     content: '';
-}.detail-list
+}*/.detail-list
 {
     overflow: hidden;
 
