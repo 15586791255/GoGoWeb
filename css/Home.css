@@ -1,10 +1,10 @@
 #Home{
-    position: absolute;
+    /*position: absolute;*/
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    display: -webkit-box;
+    /*display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -12,7 +12,7 @@
     -webkit-box-orient:vertical;
     box-orient:vertical;
     -webkit-flex-direction:column;
-    flex-direction:column;
+    flex-direction:column;*/
     background-color: #252845;
 }.lll
 {
