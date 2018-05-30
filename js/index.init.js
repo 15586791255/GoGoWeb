@@ -3,7 +3,7 @@ $(function() {
     inithome();
     initHotRaces();
     initHomeList();
-    initFoot();
+    //initFoot();
     initDetailEvent();
 });
 
