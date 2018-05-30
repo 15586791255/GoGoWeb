@@ -112,10 +112,11 @@ function initHomeList() {
 var page = 0;
 var size = 10;
 var racesIndex = "0";
+var dropload = null;
 
 function initHomeListDropload() {
     // dropload
-    var dropload = $('.HomeList').dropload({
+    dropload = $('.HomeList').dropload({
         domUp : {
             domClass   : 'dropload-up',
             domRefresh : '<div class="dropload-refresh">下拉可以刷新</div>',
@@ -195,9 +196,11 @@ function initHomeListDropload() {
                             }
                         } else {
                             dropload.noData();
+                            dropload.resetload();
                         }
                     } else if (data.code == 500) {
                         dropload.noData();
+                        dropload.resetload();
                     }
                     setTimeout(function(){
                         $('.lists').html(result);
@@ -276,9 +279,11 @@ function initHomeListDropload() {
                             }
                         } else {
                             dropload.noData();
+                            dropload.resetload();
                         }
                     } else if (data.code == 500) {
                         dropload.noData();
+                        dropload.resetload();
                     }
                     setTimeout(function(){
                         // 插入数据到页面，放到最后面
@@ -289,7 +294,7 @@ function initHomeListDropload() {
                 },
                 error: function(xhr, type){
                     // 即使加载出错，也得重置
-                    me.resetload();
+                    dropload.resetload();
                 }
             });
         }
