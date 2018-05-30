@@ -51,11 +51,11 @@ function checkScroll(e){
 
     endY = e.originalEvent.changedTouches[0].pageY;
     // 若已经移到页面最上方，则不允许再向下滑动
-    if($('.list').scrollTop() == 0 && endY > startY){
+    if($('.HomeList').scrollTop() == 0 && endY > startY){
         e.preventDefault();
     }
     // 若已经移到页面最下方，则不允许再向上滑动
-    if($('.list').scrollTop() + $('.list').height() == $('.list')[0].scrollHeight && endY < startY){
+    if($('.HomeList').scrollTop() + $('.HomeList').height() == $('.HomeList')[0].scrollHeight && endY < startY){
         e.preventDefault();
     }
 }
