@@ -1,8 +1,8 @@
 $(function() {
     inithome();
     initHotRaces();
-    //initHomeList();
-    //initFoot();
+    initHomeList();
+    initFoot();
     initDetailEvent();
 });
 
