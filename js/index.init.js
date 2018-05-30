@@ -1,5 +1,5 @@
 $(function() {
-    //initListener();
+    initListener();
     inithome();
     initHotRaces();
     initHomeList();
@@ -7,12 +7,57 @@ $(function() {
     initDetailEvent();
 });
 
-function initListener() {
-    document.body.addEventListener('touchmove', function (e) {
-      e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-    }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
-}
+var startY, endY; // 记录滑动的开始Y坐标和当前Y坐标
+var timer = null;
+var previous = null;
+var atleast = 10;
 
+$('body').on('touchstart',function(e){
+    startY = e.originalEvent.changedTouches[0].pageY;
+});
+
+// 禁用手机默认的触屏滚动行为
+$('body').on('touchmove', function (e) {
+    // 若target不在排行榜里
+    if(!$(e.target).is($('.list')) && !$(e.target).parents('.list').length > 0){
+        e.preventDefault();
+    }
+
+    // 若target在排行榜里
+    else{
+        // 函数节流
+        var now = +new Date();
+        if(!previous){
+            previous = now;
+        }
+        if (now - previous > atleast){
+            checkScroll(e);
+            // 重置上一次开始时间为本次结束时间
+            previous = now;
+        }
+        else{
+            clearTimeout(timer);
+
+            timer = setTimeout(function(){
+                checkScroll(e);
+            },200);
+        }
+    }
+});
+
+function checkScroll(e){
+    console.log("check");
+
+    endY = e.originalEvent.changedTouches[0].pageY;
+    // 若已经移到页面最上方，则不允许再向下滑动
+    if($('.list').scrollTop() == 0 && endY > startY){
+        e.preventDefault();
+    }
+    // 若已经移到页面最下方，则不允许再向上滑动
+    if($('.list').scrollTop() + $('.list').height() == $('.list')[0].scrollHeight && endY < startY){
+        e.preventDefault();
+    }
+}
 function initHotRaces() {
     var html = document.getElementById("HotSwiper").innerHTML;
     $("#Home").append(html);
